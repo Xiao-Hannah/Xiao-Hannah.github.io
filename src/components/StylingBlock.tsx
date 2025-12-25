@@ -3,31 +3,40 @@ import constants from "../constants";
 import { useWindowDimensions } from "../hooks/hooks";
 
 interface PageDetails {
-  showName?: boolean;
-  color?: string;
+  gradient?: string;
 }
 const pages: Record<string, PageDetails> = {
-  "/fridgeFriend": { showName: true, color: constants.fridgeFriendColor },
-  "/bloome": { showName: true, color: constants.bloomeColor },
-  "/about": {},
-  "/": {},
+  "/fridgeFriend": {
+    gradient: "radial-gradient(circle at 20% 50%, rgba(74, 124, 78, 0.15) 0%, transparent 50%)"
+  },
+  "/bloome": {
+    gradient: "radial-gradient(circle at 80% 30%, rgba(135, 40, 40, 0.15) 0%, transparent 50%)"
+  },
+  "/about": {
+    gradient: "radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%)"
+  },
+  "/": {
+    gradient: "radial-gradient(circle at 70% 40%, rgba(99, 102, 241, 0.12) 0%, transparent 60%)"
+  },
 };
+
 export const StylingBlock = ({ locationPath }: { locationPath: string }) => {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
+
+  if (!Object.keys(pages).includes(locationPath)) return null;
+
   return (
-    <>
-      {Object.keys(pages).includes(locationPath) ? (
-        <div
-          className="styling-block"
-          style={{
-            width: Math.min(width / 2, 500),
-            height: 500,
-            backgroundColor: pages[locationPath].color ?? constants.baseColor,
-          }}
-        >
-          {pages[locationPath].showName ? <p> Hannah Xiao</p> : null}
-        </div>
-      ) : null}
-    </>
+    <div
+      className="decorative-gradient"
+      style={{
+        position: "absolute",
+        right: 0,
+        width: Math.min(width * 0.6, 800),
+        height: 600,
+        background: pages[locationPath].gradient,
+        pointerEvents: "none",
+        zIndex: 0,
+      }}
+    />
   );
 };

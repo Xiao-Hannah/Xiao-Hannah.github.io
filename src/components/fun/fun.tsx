@@ -41,7 +41,11 @@ const items: FunItem[] = [
 export const Fun = () => {
   return (
     <div className="fun-container">
-      <h1> Something fun </h1>
+      <div className="fun-title-section">
+        <div className="fun-title-accent"></div>
+        <h1> Beyond the Work </h1>
+        <p className="fun-subtitle">Where creativity meets exploration</p>
+      </div>
       {items.map((item, index) => {
         return (
           <div key={index}>
@@ -53,7 +57,6 @@ export const Fun = () => {
               }
             >
               <div className="fun-item-block">
-                <div className="fun-item-styling-block" />
                 <div className="fun-item-text-container">
                   <h2 className="fun-item-text-title"> {item.title}</h2>
                   <h3 className="fun-item-text-description">
@@ -74,7 +77,7 @@ export const Fun = () => {
             </div>
             <div className="fun-item-image-container">
               {item.images.map((image, i) => {
-                return <img key={i} src={image} height={"400px"} />;
+                return <img key={i} src={image} alt={`${item.title} ${i + 1}`} />;
               })}
             </div>
           </div>

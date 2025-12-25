@@ -4,11 +4,17 @@ export const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-content">
+        <div className="contact-title-decoration">
+          <div className="contact-decoration-line"></div>
+          <div className="contact-decoration-circle"></div>
+          <div className="contact-decoration-line"></div>
+        </div>
         <h1> Get In Touch</h1>
+        <p className="contact-subtitle">Let's create something amazing together</p>
         <p>
-          Feel free to contact me, my inbox is always open. Whether you have a
-          question or just want to say hi, I'll try my best to get back to your
-          mail :D
+          I'm always open to collaborating on interesting projects, chatting about
+          UX research, or answering questions about my work. The best way to reach
+          me is email — I typically respond within a couple days.
         </p>
         <a
           className={"contact-button"}
@@ -16,7 +22,7 @@ export const Contact = () => {
           target="_blank"
           rel="noopener"
         >
-          <h3>Say Hello!</h3>
+          Send Email
         </a>
       </div>
     </div>

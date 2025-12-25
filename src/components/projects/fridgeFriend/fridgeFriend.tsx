@@ -167,7 +167,7 @@ export const FridgeFriend = () => {
       <div className="project-title-container">
         <div className="project-title">
           <h1>
-            Fridge Friend: AI-Powered camera that revolutionize your kitchen
+            Fridge Friend: AI-Powered Kitchen Camera
           </h1>
         </div>
         <div className="project-header-container">
@@ -234,7 +234,7 @@ export const FridgeFriend = () => {
             to="solution"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="fridge-friend-text-color"> Solution </h3>
@@ -244,7 +244,7 @@ export const FridgeFriend = () => {
             to="process"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="fridge-friend-text-color"> Process </h3>
@@ -254,7 +254,7 @@ export const FridgeFriend = () => {
             to="ideation"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="fridge-friend-text-color"> Ideation </h3>
@@ -264,7 +264,7 @@ export const FridgeFriend = () => {
             to="userTesting"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="fridge-friend-text-color">Testing & Evaluation</h3>
@@ -274,7 +274,7 @@ export const FridgeFriend = () => {
             to="iteration"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="fridge-friend-text-color"> Iteration </h3>
@@ -284,7 +284,7 @@ export const FridgeFriend = () => {
             to="reflection"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="fridge-friend-text-color"> Reflection </h3>
@@ -296,17 +296,15 @@ export const FridgeFriend = () => {
               <h3 className="fridgeFriend-body-title"> Solution </h3>
             </Element>
             <h2 className="fridgeFriend-body-subtitle">
-              An innovative solution to create a convenient lifestyle that
-              reduces waste and saves money.
+              A practical solution to reduce waste and save money on groceries.
             </h2>
             <p className="fridgeFriend-body-description paddingTop">
-              FridgeFriend is a groundbreaking solution that redefines kitchen
-              efficiency. By integrating in-fridge cameras with smart
-              technology, it tracks and manages your groceries, alerting you to
-              use items before they expire. Coupled with an automatic recipe
-              generator and a smart shopping assistant, it not only minimizes
-              food waste but also streamlines your grocery planning and
-              shopping, making kitchen management effortless and sustainable.
+              FridgeFriend uses in-fridge cameras to track what you have, when
+              it expires, and what you need to buy. The system alerts you when
+              food is about to go bad, suggests recipes based on your current
+              inventory, and automates reordering. The goal: reduce the 40% of
+              household food waste while making grocery shopping less of a chore.
+              Built and tested with NYC households over a semester-long project.
             </p>
             <div className="fridgeFriend-solution-container">
               <div style={{ width: "100%" }}>

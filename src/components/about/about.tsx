@@ -19,14 +19,45 @@ const subtitleLinks: LinkItem[] = [
 ];
 
 export const About = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      }
+    }
+  };
+
   return (
-    <div className="about-container">
+    <motion.div
+      className="about-container"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <motion.div
         className="about-title"
-        initial={{ right: "500px" }}
-        animate={{ left: "0px" }}
+        variants={itemVariants}
       >
-        <h1> Oh? Hello There! </h1>
+        <div className="about-title-wrapper">
+          <h1> About </h1>
+          <div className="about-title-underline"></div>
+        </div>
+        <p className="about-title-tagline">Designer, Researcher, Maker</p>
         <div className="about-subtitle">
           {subtitleLinks.map((subtitleLink, index) => {
             return (
@@ -41,9 +72,7 @@ export const About = () => {
       </motion.div>
       <motion.div
         className="about-description"
-        initial={{ transform: "translateX(2000px)" }}
-        animate={{ transform: "translateX(0px)" }}
-        transition={{ delay: 0.5 }}
+        variants={itemVariants}
       >
         <h3>
           Creation is at the heart of my everyday life. To me, creativity is the
@@ -59,9 +88,7 @@ export const About = () => {
       </motion.div>
       <motion.div
         className="about-image-container"
-        initial={{ transform: "translateX(2000px)" }}
-        animate={{ transform: "translateX(0px)" }}
-        transition={{ delay: 0.5 }}
+        variants={itemVariants}
       >
         <img src={aboutImage} alt="about main image" className="about-image" />
       </motion.div>
@@ -73,15 +100,15 @@ export const About = () => {
         />
 
         <div className="about-content-text-container">
-          <h3 className="about-content-text-title">MY JOURNEY</h3>
+          <h3 className="about-content-text-title">My Journey</h3>
           <div className="about-content-text">
             <p>
-              My path has taken me through consulting, market research, and
-              product management, giving me a broad skillset and igniting my
-              passion for product and data. I thrive in fast-paced environments
-              where I'm constantly learning and problem-solving. What excites me
-              most is creating meaningful products and turning user research
-              into actionable insights that improve people's lives.
+              Before grad school, I worked in consulting, market research, and
+              product management. Each role taught me something different — how to
+              ask better questions, how to read data critically, and how to build
+              products people actually need. Now I'm combining all of it: research,
+              design, and a healthy skepticism about whether we're solving the right
+              problems.
             </p>
           </div>
         </div>
@@ -92,7 +119,7 @@ export const About = () => {
         />
 
         <div className="about-content-text-container">
-          <h3 className="about-content-text-title">A PASSION FOR PEOPLE</h3>
+          <h3 className="about-content-text-title">A Passion for People</h3>
           <div className="about-content-text">
             <p>
               My background in anthropology fuels my deep curiosity about human
@@ -107,6 +134,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

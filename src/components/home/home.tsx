@@ -27,7 +27,7 @@ const projects: Projects[] = [
   {
     title: "Bloomè",
     description: [
-      "Discover Bloomè, where elegance blooms digitally. Immerse in an artful floral experience with Augmented Reality previews and tailored bouquet customization. Here, choosing flowers is not just shopping—it's a celebration of style and beauty.",
+      "A mobile app that solves a simple problem: you want flowers but don't know how they'll look in your space. Bloomè lets you preview bouquets in AR, customize arrangements, and subscribe to weekly deliveries.",
     ],
     image: flower,
     bgImage: flowerBg,
@@ -41,7 +41,7 @@ const projects: Projects[] = [
   {
     title: "Fridge Friend",
     description: [
-      "Welcome to FridgeFriend – revolutionizing your kitchen experience! With our in-fridge cameras, automated recipe generator, and intelligent shopping assistant, say goodbye to food waste and hello to efficient grocery planning.",
+      "A semester-long project tackling food waste in NYC households. We built an AI-powered camera system that lives in your fridge, tracks what you have, suggests recipes, and handles reordering.",
     ],
     image: avocado,
     bgImage: avocadoBg,
@@ -57,35 +57,67 @@ const projects: Projects[] = [
 
 export const Home = () => {
   const { width } = useWindowDimensions();
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      }
+    }
+  };
+
+  const welcomeVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.3,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      }
+    }
+  };
+
   return (
     <div className="home-container">
       <motion.div
         className="home-title"
-        initial={{ transform: "translateX(-1000px)" }}
-        animate={{ transform: "translateX(0px)" }}
+        initial="hidden"
+        animate="visible"
+        variants={titleVariants}
       >
+        <div className="home-title-decoration">
+          <div className="home-title-dot"></div>
+          <div className="home-title-line"></div>
+        </div>
         <h1> Hannah Xiao </h1>
+        <p className="home-title-subtitle">Product Designer & Researcher</p>
       </motion.div>
       <motion.div
         className="home-welcome"
-        initial={{ transform: "translateX(2000px)" }}
-        animate={{ transform: "translateX(0px)" }}
-        transition={{ delay: 0.5 }}
+        initial="hidden"
+        animate="visible"
+        variants={welcomeVariants}
       >
         <h2>Hi there!</h2>
-        <h2 style={{ fontSize: "24px" }}>
-          Welcome to my little corner of the internet! I'm a master's student at
-          University of Washington, exploring all things tech and innovation. I
-          love getting my hands messy with new creations, cracking tough
-          problems, and exploring how technology brings people together. Feel
-          free to peruse my site and let's connect!
+        <h2 style={{ fontSize: "26px" }}>
+          I'm Hannah — a master's student at UW studying tech and innovation.
+          I design products that solve real problems and build prototypes in maker
+          spaces (you might smell the laser-cut plywood). Right now I'm exploring
+          how technology shapes human connection and trying to make things that
+          matter. Stick around to see what I've been working on.
         </h2>
       </motion.div>
       <div className="home-projects-container">
         {projects.map((project, index) => {
           const backwards = index % 2 === 0;
           return (
-            <div
+            <motion.div
               className={`home-project-container ${
                 backwards ? "backwards" : ""
               }`}
@@ -97,11 +129,19 @@ export const Home = () => {
                   ? { flexDirection: "row-reverse" }
                   : { flexDirection: "row" }
               }
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.2,
+                ease: [0.6, -0.05, 0.01, 0.99],
+              }}
             >
               <MovingImage
                 mainImage={project.image}
                 backgroundImage={project.bgImage}
-                width={"25%"}
+                width={"30%"}
                 imageWidth={project.imageWidth}
                 link={project.link}
               />
@@ -140,7 +180,7 @@ export const Home = () => {
                   {`View ${project.title} now`}
                 </NavLink>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

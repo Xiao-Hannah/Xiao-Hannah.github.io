@@ -1,3 +1,6 @@
+/* Import modern fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
 /* montserrat-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -77,23 +80,28 @@
   src: url("./assets/fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
-  height: 100%;
-  background-color: rgb(245, 251, 255);
+  min-height: 100%;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 50%, #E0E7FF 100%);
+  background-attachment: fixed;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-weight: 300;
-  font-family: "Roboto";
-  color: var(--fontColor);
+  font-weight: 600;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
   position: relative;
   z-index: 30;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 ul,
 li {
@@ -106,15 +114,18 @@ li {
 h1 {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 70px;
-  letter-spacing: 5px;
+  font-size: 120px;
+  letter-spacing: -2px;
   text-align: left;
   margin: 0px;
+  @media only screen and (max-width: 1200px) {
+    font-size: 90px;
+  }
   @media only screen and (max-width: 800px) {
-    font-size: 50px;
+    font-size: 60px;
   }
   @media only screen and (max-width: 600px) {
-    font-size: 40px;
+    font-size: 48px;
   }
 }
 
@@ -140,14 +151,25 @@ h3 {
 }
 
 p {
-  font-family: "Open Sans";
-  font-weight: 200;
-  line-height: 1.5;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
   font-size: 18px;
-  color: var(--fontColor);
+  color: var(--text);
   @media only screen and (max-width: 800px) {
     font-size: 16px;
+    line-height: 1.6;
   }
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
 }
 
 .styling-block {
@@ -159,15 +181,6 @@ p {
     font-weight: bolder;
     font-family: "Montserrat";
   }
-}
-.scrollToTop {
-  position: fixed;
-  right: 15px;
-  bottom: 60px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: opacity 500ms ease-in;
 }
 
 ol {

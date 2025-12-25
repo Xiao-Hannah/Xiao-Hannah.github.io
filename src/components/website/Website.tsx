@@ -5,11 +5,13 @@ import { Navbar } from "../navigation/navbar";
 import { Footer } from "../footer/footer";
 import { AnimatedRoutes } from "../AnimatedRoutes";
 import { ScrollRouter } from "../../hooks/hooks";
+import { FloatingShapes } from "../FloatingShapes";
 
 export const Website = () => {
   return (
     <BrowserRouter basename={"/"}>
       <ScrollRouter />
+      <FloatingShapes />
       <div className="website-container">
         <Navbar />
         <div className={"website-content"}>

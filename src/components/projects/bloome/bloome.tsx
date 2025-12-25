@@ -55,27 +55,23 @@ export const Bloome = () => {
               <b>Introduction</b>
             </h3>
             <p>
-              Bloomè is an innovative digital platform designed to transform the
-              floral shopping experience. Recognizing that selecting the perfect
-              bouquet can be a time-consuming challenge for many, Bloomè
-              simplifies this process with cutting-edge features. Our unique
-              selling points include: Augmented Reality (AR) Preview, Customized
-              Bouquets, Weekly Delivery Service.
+              Bloomè is a mobile app designed for Google's UX Certificate program.
+              The challenge: make buying flowers less overwhelming. The solution:
+              let people see how bouquets look in their actual space using AR,
+              customize arrangements to their taste, and set up weekly deliveries.
+              Built through user research, iterative testing, and real feedback.
             </p>
             <h3 className="bloome-header-topic-title padding-top">
               <b>Journey from concept to creation</b>
             </h3>
             <p>
-              Over an intense month of design and development, Bloomè evolved
-              from a mere idea to a user-centric platform. The process was
-              anchored in deep empathy for our users. We engaged in innovative
-              empathy exercises, like 'A Day in the Life' of potential
-              customers, to truly understand their floral shopping challenges.
-              Ideation sessions were vibrant and diverse, employing techniques
-              like "Crazy 8's" to stimulate creativity. Prototyping was
-              iterative, with each version informed by rigorous usability
-              testing. This process ensured that every feature of Bloomè was
-              fine-tuned to meet the users' needs and desires.
+              This was a month-long project following Google's design sprint
+              methodology. Started with user interviews to understand why flower
+              shopping feels complicated. Used exercises like 'A Day in the Life'
+              to map out user pain points. Ran ideation sessions using techniques
+              like Crazy 8's. Built prototypes, tested them with real users, and
+              refined based on what actually worked and what didn't. Each iteration
+              was driven by specific feedback, not assumptions.
             </p>
           </div>
         </div>
@@ -88,7 +84,7 @@ export const Bloome = () => {
             to="solution"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color"> Solution </h3>
@@ -98,7 +94,7 @@ export const Bloome = () => {
             to="process"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color"> Process </h3>
@@ -108,7 +104,7 @@ export const Bloome = () => {
             to="emphasize"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color"> Emphasize </h3>
@@ -118,7 +114,7 @@ export const Bloome = () => {
             to="define"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color"> Define </h3>
@@ -128,7 +124,7 @@ export const Bloome = () => {
             to="ideate"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color">Ideate</h3>
@@ -138,7 +134,7 @@ export const Bloome = () => {
             to="prototype"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color"> Prototype </h3>
@@ -148,7 +144,7 @@ export const Bloome = () => {
             to="reflection"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={300}
             offset={-100}
           >
             <h3 className="bloome-text-color"> Reflection </h3>

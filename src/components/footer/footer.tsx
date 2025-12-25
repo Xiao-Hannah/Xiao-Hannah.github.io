@@ -20,22 +20,25 @@ export const Footer = () => {
     <div className="footer-container">
       <div className="footer-content">
         <h2> Let's Connect </h2>
-        {footerOptions.map((footerOption, index) => {
-          return (
-            <h3 key={index}>
-              <a href={footerOption.link} target="_blank" rel="noopener">
-                {footerOption.displayName}
-              </a>
-            </h3>
-          );
-        })}
+        <div className="footer-links">
+          {footerOptions.map((footerOption, index) => {
+            return (
+              <h3 key={index}>
+                <a href={footerOption.link} target="_blank" rel="noopener">
+                  {footerOption.displayName}
+                </a>
+              </h3>
+            );
+          })}
+        </div>
         <div className="footer-logo">
           <img
             src={catImage}
             style={{ display: "inline-flex" }}
             height={"28px"}
+            alt="Cat logo"
           />
-          <p>© Hannah Xiao 2023 </p>
+          <p>© Hannah Xiao 2024</p>
         </div>
       </div>
     </div>

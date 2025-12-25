@@ -9,29 +9,35 @@
 }
 
 .fridgeFriend-body {
-  padding: 30px;
+  padding: 50px;
 
+  @media only screen and (max-width: 800px) {
+    padding: 30px;
+  }
   @media only screen and (max-width: 600px) {
-    padding: 5px;
+    padding: 20px;
   }
   .fridgeFriend-body-title {
-    text-transform: uppercase;
-    color: #759675;
+    color: #4A7C4E;
+    font-weight: 600;
+    font-size: 32px;
   }
   .fridgeFriend-body-topic-title {
-    text-transform: uppercase;
-    color: #759675;
-    font-weight: 400;
+    color: #4A7C4E;
+    font-weight: 600;
   }
 
   .fridgeFriend-body-subtitle {
-    text-transform: uppercase;
     font-size: 28px;
     font-weight: 700;
   }
   .fridgeFriend-body-subtitle-2 {
-    text-transform: uppercase;
     font-size: 24px;
+    font-weight: 600;
+  }
+
+  img {
+    border-radius: 8px;
   }
 }
 

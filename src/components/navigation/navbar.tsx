@@ -55,38 +55,12 @@ export const Navbar = ({ selectedItem }: NavbarProps) => {
               }
               key={navbarItem.displayName}
               className="navbar-item-anchor"
-              onMouseOver={() => {
-                setItemHovered(index);
-              }}
-              onMouseLeave={() => {
-                setItemHovered(-1);
-              }}
             >
-              <div
-                className={
-                  index === itemHovered && index !== itemSelected
-                    ? "navbar-item-hover isHovered"
-                    : "navbar-item-hover"
-                }
-                style={{
-                  backgroundColor:
-                    pages[location.pathname] ?? constants.baseColor,
-                  opacity: 0.5,
-                }}
-              />
               <div
                 className={
                   itemSelected === index
                     ? "navbar-item selected"
                     : "navbar-item"
-                }
-                style={
-                  itemSelected === index
-                    ? {
-                        backgroundColor:
-                          pages[location.pathname] ?? constants.baseColor,
-                      }
-                    : {}
                 }
               >
                 {navbarItem.displayName}
@@ -113,9 +87,6 @@ export const Navbar = ({ selectedItem }: NavbarProps) => {
           </div>
           <div
             className={menuOpen ? "navbar-sidebar" : "navbar-sidebar is-open"}
-            style={{
-              backgroundColor: pages[location.pathname] ?? constants.baseColor,
-            }}
           >
             {navbarItems.map((navbarItem, index) => {
               return (
@@ -127,28 +98,7 @@ export const Navbar = ({ selectedItem }: NavbarProps) => {
                   }
                   key={navbarItem.displayName}
                   className="navbar-item-anchor"
-                  onMouseOver={() => {
-                    setItemHovered(index);
-                  }}
-                  onMouseLeave={() => {
-                    setItemHovered(-1);
-                  }}
-                  style={
-                    itemSelected === index
-                      ? {
-                          backgroundColor:
-                            pages[location.pathname] ?? constants.baseColor,
-                        }
-                      : {}
-                  }
                 >
-                  <div
-                    className={
-                      index === itemHovered && index !== itemSelected
-                        ? "navbar-item-hover isHovered"
-                        : "navbar-item-hover"
-                    }
-                  />
                   <div
                     className={
                       itemSelected === index

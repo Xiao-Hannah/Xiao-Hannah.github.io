@@ -2,26 +2,29 @@
   color: #872828;
 }
 .bloome-header-topic-title {
-  text-transform: uppercase;
   color: #872828;
+  font-weight: 600;
 }
 
 .bloome-body {
-  padding: 30px;
+  padding: 50px;
   &.removePadding {
-    padding: 0px 30px;
+    padding: 0px 50px;
+  }
+  @media only screen and (max-width: 800px) {
+    padding: 30px;
   }
   @media only screen and (max-width: 600px) {
-    padding: 5px;
+    padding: 20px;
   }
   .bloome-body-title {
-    text-transform: uppercase;
     color: #872828;
+    font-weight: 600;
+    font-size: 32px;
   }
   .bloome-body-topic-title {
-    text-transform: uppercase;
     color: #872828;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .bloome-body-subtitle {
@@ -29,10 +32,13 @@
     font-weight: 300;
   }
   .bloome-body-subtitle-2 {
-    text-transform: uppercase;
     font-size: 20px;
     color: #872828;
-    font-weight: 200;
+    font-weight: 500;
+  }
+
+  img {
+    border-radius: 8px;
   }
 }
 

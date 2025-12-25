@@ -3,42 +3,52 @@
   display: inline-flex;
   flex-direction: row-reverse;
   justify-content: right;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  @media only screen and (max-width: 800px) {
+    top: 30px;
+    right: 30px;
+    padding: 12px 20px;
+  }
 }
 
 .navbar-item-anchor {
   text-decoration: none;
   position: relative;
   z-index: 10;
-  color: var(--fontColor);
-  &:focus,
-  :hover {
-    color: var(--fontColorActive);
+  color: var(--text);
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 25px;
+  &:hover {
+    color: var(--secondary);
+    background: rgba(99, 102, 241, 0.08);
   }
 }
 .navbar-item-hover {
-  height: 10px;
-  position: absolute;
-  top: 14px;
-  transition: 450ms;
-  width: 0px;
-  left: 10px;
-  z-index: 2;
-  &.isHovered {
-    width: 80%;
-  }
+  display: none;
 }
 .navbar-item {
-  margin: 8px;
-  font-size: 20px;
-  font-family: "Fira Sans";
-  font-size: 1.4em;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
   line-height: 1.3em;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
   &.selected {
-    transition: 400ms;
+    color: white;
+    background: var(--secondary);
+    border-radius: 25px;
+    padding: 8px 16px;
+    margin: -8px -16px;
   }
 }
 
@@ -136,9 +146,11 @@
   right: 0;
   padding: 50px 10px;
   width: min(75vw, 400px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  box-shadow: -4px 0 24px rgba(15, 23, 42, 0.1);
   height: 100vh;
   outline: 0;
-  box-shadow: 0 10px 30px -15px var(--fontColorActive);
   z-index: 40;
   transform: translateX(0vw);
   visibility: visible;

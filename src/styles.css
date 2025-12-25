@@ -1,8 +1,27 @@
 :root {
-  --stylingColor: rgb(171, 199, 214);
-  --stylingColorTransparent: rgb(171, 199, 214, 0.5);
-  --fontColor: #0c394e;
-  --fontColorLight: #608da2;
-  --fontColorActive: #135777;
-  --websiteBackgroundColor: #fffbf5;
+  /* Cool Elegance Color Palette */
+  --primary: #0F172A;        /* rich navy */
+  --secondary: #6366F1;      /* vibrant indigo */
+  --accent: #8B5CF6;         /* purple */
+  --background: #F8FAFC;     /* cool white */
+  --surface: #FFFFFF;
+  --text: #0F172A;
+  --text-light: #64748B;
+
+  /* Legacy color variables (for gradual migration) */
+  --stylingColor: #6366F1;
+  --stylingColorTransparent: rgba(99, 102, 241, 0.5);
+  --fontColor: #0F172A;
+  --fontColorLight: #64748B;
+  --fontColorActive: #6366F1;
+  --websiteBackgroundColor: #F8FAFC;
+
+  /* Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-2xl: 120px;
+  --space-3xl: 160px;
 }
