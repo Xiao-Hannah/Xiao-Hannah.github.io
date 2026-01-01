@@ -1,8 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
-const isProd = process.env.NODE_ENV === "production";
+const CopyPlugin = require("copy-webpack-plugin");
 
-module.exports = {
+module.exports = (env, argv) => {
+  const isProd = argv.mode === "production";
+
+  return {
   entry: "./src/index.js",
   mode: isProd ? "production" : "development",
   module: {
@@ -24,6 +27,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "assets/images/[name].[ext]",
+              publicPath: isProd ? "/" : "/dist/",
             },
           },
         ],
@@ -35,6 +39,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "assets/files/[name].[ext]",
+              publicPath: isProd ? "/" : "/dist/",
             },
           },
         ],
@@ -61,8 +66,43 @@ module.exports = {
     },
     port: 3000,
     hot: "only",
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: "/index.html",
+      rewrites: [
+        { from: /./, to: "/index.html" }
+      ]
+    },
   },
   watch: process.env.NODE_ENV === "development" && true,
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "public/index.html",
+          to: "index.html",
+          transform(content) {
+            // In production, change bundle path from /dist/bundle.js to ./bundle.js
+            const contentStr = content.toString();
+            // Use webpack mode to determine if production
+            const mode = process.argv.includes('--mode')
+              ? process.argv[process.argv.indexOf('--mode') + 1]
+              : 'development';
+            if (mode === 'production') {
+              return contentStr.replace('/dist/bundle.js', './bundle.js');
+            }
+            return contentStr;
+          },
+        },
+        {
+          from: "public",
+          to: "",
+          globOptions: {
+            ignore: ["**/index.html"],
+          },
+        },
+      ],
+    }),
+  ],
+  };
 };

@@ -7,7 +7,7 @@ interface PageDetails {
 }
 const pages: Record<string, PageDetails> = {
   "/fridgeFriend": {
-    gradient: "radial-gradient(circle at 20% 50%, rgba(74, 124, 78, 0.15) 0%, transparent 50%)"
+    gradient: "radial-gradient(circle at 80% 30%, rgba(74, 124, 78, 0.15) 0%, transparent 50%)"
   },
   "/bloome": {
     gradient: "radial-gradient(circle at 80% 30%, rgba(135, 40, 40, 0.15) 0%, transparent 50%)"

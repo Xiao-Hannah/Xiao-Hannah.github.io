@@ -1,19 +1,19 @@
 :root {
-  /* Cool Elegance Color Palette */
+  /* Columbia Blue Color Palette */
   --primary: #0F172A;        /* rich navy */
-  --secondary: #6366F1;      /* vibrant indigo */
-  --accent: #8B5CF6;         /* purple */
+  --secondary: #10a7f2;      /* columbia blue */
+  --accent: #63bad4;         /* bright sky blue */
   --background: #F8FAFC;     /* cool white */
   --surface: #FFFFFF;
   --text: #0F172A;
   --text-light: #64748B;
 
   /* Legacy color variables (for gradual migration) */
-  --stylingColor: #6366F1;
-  --stylingColorTransparent: rgba(99, 102, 241, 0.5);
+  --stylingColor: #10a7f2;
+  --stylingColorTransparent: rgba(155, 221, 255, 0.5);
   --fontColor: #0F172A;
   --fontColorLight: #64748B;
-  --fontColorActive: #6366F1;
+  --fontColorActive: #9BDDFF;
   --websiteBackgroundColor: #F8FAFC;
 
   /* Spacing Scale */
