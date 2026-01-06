@@ -56,7 +56,7 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('about')} className="nav-link">
             About
           </button>
-          <button onClick={() => navigateToPage('/for-fun')} className="nav-link">
+          <button onClick={() => scrollToSection('for-fun')} className="nav-link">
             For Fun
           </button>
           <button onClick={() => scrollToSection('contact')} className="nav-link">
@@ -83,7 +83,7 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('about')} className="mobile-nav-link">
             About
           </button>
-          <button onClick={() => navigateToPage('/for-fun')} className="mobile-nav-link">
+          <button onClick={() => scrollToSection('for-fun')} className="mobile-nav-link">
             For Fun
           </button>
           <button onClick={() => scrollToSection('contact')} className="mobile-nav-link">

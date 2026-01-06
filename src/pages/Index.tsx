@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/navigation/Navigation";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Footer from "@/components/layout/Footer";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, Mail, ArrowRight } from "lucide-react";
 import resume from "@/assets/files/resume.pdf";
 import './Index.less';
 
@@ -25,6 +26,7 @@ const projects = [
 
 const Index = () => {
   const [heroVisible, setHeroVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setHeroVisible(true);
@@ -43,11 +45,9 @@ const Index = () => {
       <section className="hero-section">
         <div className="container">
           <div className={`hero-content ${heroVisible ? 'visible' : ''}`}>
-            <p className="hero-label">UX Designer & Researcher</p>
+            <p className="hero-label">Product Growth Manager</p>
             <h1 className="hero-title">
-              Creating meaningful experiences through
-              <span className="highlight"> research-driven design</span>—
-              one user story at a time.
+              Driving <span className="highlight">product growth</span> by turning user insights into <span className="highlight">experiments</span> across the funnel.
             </h1>
           </div>
         </div>
@@ -91,15 +91,14 @@ const Index = () => {
 
               <div className="about-text">
                 <p>
-                  Creation is at the heart of my everyday life. As a UX designer and researcher,
-                  I blend anthropological curiosity with design thinking to create meaningful
-                  digital experiences.
+                  I'm a product manager who believes creativity is the heart of everything.
+                  With my anthropology and economics background at Columbia, I am deeply
+                  interested in human connections and narratives. This passion for
+                  understanding people drives everything I create.
                 </p>
                 <p>
-                  My background in anthropology fuels my deep curiosity about human connections
-                  and narratives. I fell in love with ethnography because it reveals the
-                  intricate social networks that shape people's lives. This passion for
-                  understanding people drives everything I create.
+                  With a M.S. degree at University of Washington, I want to create meaningful
+                  digital experiences for my users through data and prototyping.
                 </p>
               </div>
             </div>
@@ -108,16 +107,16 @@ const Index = () => {
               <div className="about-block">
                 <h3>Currently</h3>
                 <p>
-                  Master's student at University of Washington, looking for opportunities to
-                  create impactful products through user research and thoughtful design.
+                  Based in Seattle, pursuing a master's degree at the University of Washington,
+                  focusing on how research and data translate into product decisions.
                 </p>
               </div>
 
               <div className="about-block">
-                <h3>Background</h3>
+                <h3>Previously</h3>
                 <p>
-                  Consulting, market research, and product management—giving me a broad
-                  skillset and passion for turning research into actionable insights.
+                  Experience across consulting, market research, and product management, often
+                  working where ambiguity turns into clarity.
                 </p>
               </div>
             </div>
@@ -125,10 +124,50 @@ const Index = () => {
         </div>
       </section>
 
+      {/* For Fun Section */}
+      <section id="for-fun" className="for-fun-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-number">03</span>
+            <h2>For Fun</h2>
+            <p className="section-description">
+              Beyond design—exploring the world, capturing moments, and embracing new experiences.
+            </p>
+          </div>
+
+          <div className="for-fun-topics">
+            <div className="for-fun-topic">
+              <h3>Archaeological Project</h3>
+              <p>From Sherds to Society: An analysis of Kwahe'e Black-on-white and Social Interaction in the Taos District</p>
+            </div>
+            <div className="for-fun-topic">
+              <h3>Photography</h3>
+              <p>Photos are my way to connect with people all around world</p>
+            </div>
+            <div className="for-fun-topic">
+              <h3>Travelling</h3>
+              <p>Where's my next adventure</p>
+            </div>
+            <div className="for-fun-topic">
+              <h3>Trying New Things</h3>
+              <p>Venturing out of my comfort zone</p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => navigate('/for-fun')}
+            className="for-fun-link"
+          >
+            View My Adventures
+            <ArrowRight className="icon" />
+          </button>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="contact-section">
         <div className="container">
-          <span className="section-number">03</span>
+          <span className="section-number">04</span>
           <h2>Let's Connect</h2>
           <p className="contact-description">
             Always open to discussing new projects, collaborations, or opportunities.
