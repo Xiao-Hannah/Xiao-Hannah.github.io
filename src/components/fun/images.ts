@@ -26,7 +26,6 @@ import travellingImage6 from "./../../assets/images/travelling/travelling6.jpg";
 import travellingImage7 from "./../../assets/images/travelling/travelling7.jpg";
 import travellingImage8 from "./../../assets/images/travelling/travelling8.jpg";
 
-import funImage1 from "./../../assets/images/fun/fun1.jpeg";
 import funImage2 from "./../../assets/images/fun/fun2.jpg";
 import funImage3 from "./../../assets/images/fun/fun3.jpg";
 import funImage4 from "./../../assets/images/fun/fun4.jpg";
@@ -65,4 +64,4 @@ export const travellingImages = [
   travellingImage8,
 ];
 
-export const funImages = [funImage1, funImage2, funImage3, funImage4];
+export const funImages = [funImage2, funImage3, funImage4];

@@ -1,0 +1,346 @@
+@import "../styles/variables.less";
+@import "../styles/mixins.less";
+
+// Bloome-specific color theme
+.bloome-page {
+  --bloome-primary: #872828;
+  --bloome-light: #E3B8B5;
+  --bloome-accent: #d3908ca3;
+}
+
+// Hero Section
+.bloome-hero {
+  padding: 8rem 0 4rem;
+  background-color: var(--bloome-accent);
+
+  @media @mobile {
+    padding: 6rem 0 3rem;
+  }
+
+  .bloome-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    color: var(--bloome-primary);
+  }
+
+  .bloome-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media @tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media @mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .bloome-meta-column,
+  .bloome-meta-about {
+    h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--bloome-primary);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+  }
+
+  .bloome-meta-about {
+    @media @tablet {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// Table of Contents
+.bloome-toc {
+  position: sticky;
+  top: 80px;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+  z-index: 40;
+  padding: 1rem 0;
+
+  .bloome-toc-nav {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--muted);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--bloome-primary);
+      border-radius: 2px;
+    }
+
+    button {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted-foreground);
+      white-space: nowrap;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--bloome-primary);
+      }
+    }
+  }
+}
+
+// Section Styles
+.bloome-section {
+  padding: 4rem 0;
+
+  @media @mobile {
+    padding: 3rem 0;
+  }
+
+  .bloome-section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--bloome-primary);
+  }
+
+  .bloome-subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .bloome-subsection-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 3rem 0 1.5rem;
+    color: var(--bloome-primary);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem;
+    color: var(--foreground);
+  }
+
+  h4 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--foreground);
+  }
+
+  .bloome-text-block {
+    color: var(--muted-foreground);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+
+    strong {
+      color: var(--foreground);
+      font-weight: 500;
+    }
+  }
+
+  .bloome-image {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Logo Text
+.bloome-logo-text {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-style: italic;
+  color: var(--bloome-primary);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+// Solution Features
+.bloome-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media @tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .bloome-feature-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin: 1rem 0 0.5rem;
+      color: var(--bloome-primary);
+    }
+
+    p {
+      color: var(--muted-foreground);
+      line-height: 1.6;
+    }
+  }
+}
+
+// Process Section
+.bloome-process-section {
+  background-color: var(--card);
+}
+
+.bloome-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media @desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media @tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media @mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .bloome-process-item {
+    text-align: center;
+
+    h4 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      color: var(--bloome-primary);
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Persona Section
+.bloome-persona-section {
+  margin: 3rem 0;
+}
+
+.bloome-persona-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--bloome-primary);
+  margin-bottom: 0.5rem;
+
+  &.bloome-persona-blue {
+    color: #4A90E2;
+  }
+}
+
+.bloome-persona-goal {
+  color: var(--muted-foreground);
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+// Define Section
+.bloome-define-section {
+  background-color: var(--card);
+}
+
+.bloome-hmw {
+  background-color: var(--bloome-light);
+  padding: 2rem;
+  border-left: 4px solid var(--bloome-primary);
+  margin: 2rem 0;
+  border-radius: 0.25rem;
+
+  p {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--bloome-primary);
+    margin: 0;
+  }
+}
+
+// Findings
+.bloome-findings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media @tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .bloome-finding {
+    h4 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+      color: var(--bloome-primary);
+    }
+
+    p {
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+  }
+}
