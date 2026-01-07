@@ -12,6 +12,7 @@ import hardware1 from "@/assets/images/tlink/hardware1.jpg";
 import hardware2 from "@/assets/images/tlink/hardware2.jpg";
 import hardware3 from "@/assets/images/tlink/hardware3.jpg";
 import hardware4 from "@/assets/images/tlink/hardware4.jpg";
+import tlinkMilestonePdf from "@/assets/files/tlinkMilestone.pdf";
 
 const TLink = () => {
   const scrollToSection = (id: string) => {
@@ -96,6 +97,14 @@ const TLink = () => {
                     className="tlink-btn tlink-btn-secondary"
                   >
                     View Portal Code
+                  </a>
+                  <a
+                    href={tlinkMilestonePdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tlink-btn tlink-btn-secondary"
+                  >
+                    View Final Project PDF
                   </a>
                 </div>
               </div>
