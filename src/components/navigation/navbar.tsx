@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useIsMobile } from "../../hooks/hooks";
 import constants from "../../constants";
@@ -51,7 +51,7 @@ export const Navbar = ({ selectedItem }: NavbarProps) => {
           return (
             <NavLink
               to={
-                index !== 3 ? navbarItems[index].displayName.toLowerCase() : ""
+                index !== 3 ? (navbarItems[index]?.displayName.toLowerCase() ?? "") : ""
               }
               key={navbarItem.displayName}
               className="navbar-item-anchor"
@@ -122,7 +122,7 @@ export const Navbar = ({ selectedItem }: NavbarProps) => {
                 <NavLink
                   to={
                     index !== 3
-                      ? navbarItems[index].displayName.toLowerCase()
+                      ? (navbarItems[index]?.displayName.toLowerCase() ?? "")
                       : ""
                   }
                   key={navbarItem.displayName}

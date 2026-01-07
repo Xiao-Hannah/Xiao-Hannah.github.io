@@ -9,6 +9,13 @@ import './Index.less';
 
 const projects = [
   {
+    title: "T-Mobile CareLink",
+    description: "An integrated hardware and software solution for hypertension medication tracking, leveraging T-Mobile's 5G connectivity for real-time adherence monitoring.",
+    category: "Product Management & Full-Stack Development",
+    year: "2024",
+    link: "/tlink",
+  },
+  {
     title: "Bloomè",
     description: "An all-in-one platform helping users overcome period poverty through education, product accessibility, and community support.",
     category: "UX Research & Design",
@@ -45,7 +52,7 @@ const Index = () => {
       <section className="hero-section">
         <div className="container">
           <div className={`hero-content ${heroVisible ? 'visible' : ''}`}>
-            <p className="hero-label">Product Growth Manager</p>
+            <p className="hero-label">Product Manager</p>
             <h1 className="hero-title">
               Driving <span className="highlight">product growth</span> by turning user insights into <span className="highlight">experiments</span> across the funnel.
             </h1>

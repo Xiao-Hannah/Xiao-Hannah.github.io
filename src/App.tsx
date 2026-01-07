@@ -4,6 +4,7 @@ import ScrollToTop from "@/components/layout/ScrollToTop";
 import Index from "@/pages/Index";
 import Bloome from "@/pages/Bloome";
 import FridgeFriend from "@/pages/FridgeFriend";
+import TLink from "@/pages/TLink";
 import ForFun from "@/pages/ForFun";
 import NotFound from "@/pages/NotFound";
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/" element={<Index />} />
         <Route path="/bloome" element={<Bloome />} />
         <Route path="/fridgefriend" element={<FridgeFriend />} />
+        <Route path="/tlink" element={<TLink />} />
         <Route path="/for-fun" element={<ForFun />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

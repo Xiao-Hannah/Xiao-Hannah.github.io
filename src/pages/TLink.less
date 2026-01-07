@@ -1,0 +1,828 @@
+// T-Mobile CareLink Project Page Styles
+@import '../styles/variables.less';
+@import '../styles/mixins.less';
+
+// T-Mobile Brand Colors
+@tmobile-magenta: #E20074;
+@tmobile-magenta-dark: #C5007A;
+@tmobile-magenta-light: #FF009E;
+@tmobile-gray: #5F6062;
+@tmobile-light-gray: #F5F5F5;
+@tmobile-dark: #2D2A26;
+
+.tlink-page {
+  background: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  // Hero Section
+  .tlink-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #fef5fb 0%, #fff 100%);
+
+    .tlink-logo-container {
+      text-align: center;
+      margin-bottom: 32px;
+
+      .tlink-logo {
+        max-width: 120px;
+        height: auto;
+      }
+    }
+
+    .tlink-title {
+      font-size: 48px;
+      font-weight: 600;
+      color: @tmobile-dark;
+      text-align: center;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .tlink-tagline {
+      font-size: 20px;
+      color: @tmobile-gray;
+      text-align: center;
+      margin-bottom: 48px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tlink-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      gap: 48px;
+      margin-top: 64px;
+
+      .tlink-meta-column,
+      .tlink-meta-about {
+        h3 {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: @tmobile-magenta;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 16px;
+          color: @tmobile-gray;
+          margin-bottom: 16px;
+          line-height: 1.6;
+        }
+      }
+
+      .tlink-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 24px;
+        flex-wrap: wrap;
+      }
+
+      .tlink-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: @tmobile-magenta;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: @tmobile-magenta-dark;
+          transform: translateY(-2px);
+        }
+
+        &.tlink-btn-secondary {
+          background: white;
+          color: @tmobile-magenta;
+          border: 2px solid @tmobile-magenta;
+
+          &:hover {
+            background: @tmobile-light-gray;
+          }
+        }
+      }
+    }
+  }
+
+  // Table of Contents
+  .tlink-toc {
+    background: @tmobile-dark;
+    padding: 20px 0;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+
+    .tlink-toc-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+
+      button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: @tmobile-magenta;
+        }
+      }
+    }
+  }
+
+  // Common Section Styles
+  .tlink-section {
+    padding: 80px 0;
+
+    .tlink-section-title {
+      font-size: 40px;
+      font-weight: 600;
+      color: @tmobile-dark;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .tlink-subtitle {
+      font-size: 20px;
+      color: @tmobile-gray;
+      text-align: center;
+      margin-bottom: 48px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tlink-text-block {
+      font-size: 18px;
+      line-height: 1.8;
+      color: @tmobile-gray;
+      margin-bottom: 24px;
+
+      strong {
+        color: @tmobile-dark;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // Problem Section
+  .tlink-problem-section {
+    background: @tmobile-light-gray;
+
+    .tlink-problem-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      margin-top: 48px;
+    }
+
+    .tlink-problem-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .tlink-stat {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid @tmobile-magenta;
+
+      .tlink-stat-number {
+        font-size: 48px;
+        font-weight: 700;
+        color: @tmobile-magenta;
+        margin-bottom: 8px;
+      }
+
+      .tlink-stat-label {
+        font-size: 16px;
+        color: @tmobile-gray;
+        line-height: 1.5;
+      }
+    }
+
+    .tlink-highlight {
+      background: linear-gradient(135deg, @tmobile-magenta 0%, @tmobile-magenta-light 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      font-size: 20px;
+      line-height: 1.7;
+      margin-top: 32px;
+      font-weight: 500;
+    }
+  }
+
+  // Solution Section
+  .tlink-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .tlink-solution-card {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(226, 0, 116, 0.15);
+    }
+
+    .tlink-solution-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: @tmobile-magenta;
+      margin-bottom: 16px;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      color: @tmobile-dark;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      color: @tmobile-gray;
+      line-height: 1.6;
+    }
+  }
+
+  // User Flow
+  .tlink-user-flow {
+    margin-top: 64px;
+    padding: 48px;
+    background: @tmobile-light-gray;
+    border-radius: 16px;
+
+    h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: @tmobile-dark;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .tlink-flow-steps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tlink-flow-step {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+
+      .tlink-flow-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 14px;
+        color: @tmobile-gray;
+        line-height: 1.5;
+      }
+    }
+
+    .tlink-flow-arrow {
+      font-size: 24px;
+      color: @tmobile-magenta;
+      font-weight: 700;
+    }
+  }
+
+  // Hardware Section
+  .tlink-hardware-section {
+    background: @tmobile-light-gray;
+
+    .tlink-hardware-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .tlink-hardware-feature {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: @tmobile-magenta;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 15px;
+        color: @tmobile-gray;
+        line-height: 1.6;
+      }
+    }
+
+    .tlink-hardware-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .tlink-iteration-note {
+      background: @tmobile-magenta;
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+
+      h4 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        opacity: 0.95;
+      }
+    }
+  }
+
+  // Technical Section
+  .tlink-technical-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .tlink-technical-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid @tmobile-light-gray;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: @tmobile-magenta;
+    }
+
+    &.tlink-technical-card-wide {
+      grid-column: 1 / -1;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: @tmobile-dark;
+      margin-bottom: 12px;
+    }
+
+    .tlink-tech-badge {
+      display: inline-block;
+      background: @tmobile-magenta;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .tlink-tech-description {
+      font-size: 16px;
+      color: @tmobile-gray;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .tlink-tech-details {
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: @tmobile-dark;
+        margin-top: 20px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 15px;
+        color: @tmobile-gray;
+        font-family: 'Courier New', monospace;
+        background: @tmobile-light-gray;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 16px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 15px;
+          color: @tmobile-gray;
+          padding: 8px 0;
+          padding-left: 24px;
+          position: relative;
+
+          &:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: @tmobile-magenta;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  // Pipeline
+  .tlink-pipeline {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    background: @tmobile-light-gray;
+    padding: 32px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+
+    .tlink-pipeline-step {
+      flex: 1;
+      min-width: 180px;
+
+      h5 {
+        font-size: 14px;
+        font-weight: 700;
+        color: @tmobile-magenta;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font-size: 13px;
+        color: @tmobile-gray;
+        margin-bottom: 6px;
+      }
+    }
+
+    .tlink-pipeline-arrow {
+      font-size: 24px;
+      color: @tmobile-magenta;
+      font-weight: 700;
+    }
+  }
+
+  // Challenges
+  .tlink-challenges {
+    margin-top: 64px;
+    padding: 48px;
+    background: linear-gradient(135deg, #fef5fb 0%, #fff 100%);
+    border-radius: 16px;
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      color: @tmobile-dark;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .tlink-challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .tlink-challenge {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: @tmobile-dark;
+        margin-bottom: 16px;
+      }
+
+      .tlink-challenge-problem {
+        font-size: 15px;
+        color: @tmobile-gray;
+        line-height: 1.7;
+        margin-bottom: 16px;
+        padding-left: 16px;
+        border-left: 3px solid #ff6b6b;
+      }
+
+      .tlink-challenge-solution {
+        font-size: 15px;
+        color: @tmobile-gray;
+        line-height: 1.7;
+        padding-left: 16px;
+        border-left: 3px solid #51cf66;
+
+        strong {
+          color: @tmobile-magenta;
+        }
+      }
+    }
+  }
+
+  // Portals Section
+  .tlink-portals-section {
+    background: @tmobile-light-gray;
+
+    .tlink-portal-showcase {
+      margin-bottom: 80px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: @tmobile-dark;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .tlink-portal-image {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        margin-bottom: 32px;
+      }
+
+      .tlink-portal-image-small {
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        margin-bottom: 24px;
+      }
+
+      > p {
+        font-size: 18px;
+        color: @tmobile-gray;
+        text-align: center;
+        line-height: 1.7;
+      }
+    }
+
+    .tlink-portal-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .tlink-portal-feature {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: @tmobile-magenta;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 15px;
+        color: @tmobile-gray;
+        line-height: 1.6;
+      }
+    }
+
+    .tlink-tech-stack-note {
+      background: @tmobile-magenta;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+
+      p {
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+  }
+
+  // Reflection Section
+  .tlink-reflection-section {
+    .tlink-reflection-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tlink-outcomes {
+      margin-top: 48px;
+      padding: 48px;
+      background: linear-gradient(135deg, @tmobile-magenta 0%, @tmobile-magenta-light 100%);
+      border-radius: 16px;
+      color: white;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .tlink-outcome-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .tlink-outcome {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+
+        .tlink-outcome-icon {
+          font-size: 28px;
+          flex-shrink: 0;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1024px) {
+    .tlink-hero {
+      .tlink-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    .tlink-problem-section {
+      .tlink-problem-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tlink-solution-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tlink-hardware-section {
+      .tlink-hardware-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tlink-hardware-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .tlink-technical-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tlink-challenges {
+      .tlink-challenge-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tlink-portals-section {
+      .tlink-portal-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tlink-outcomes {
+      .tlink-outcome-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tlink-hero {
+      padding: 80px 0 40px;
+
+      .tlink-title {
+        font-size: 32px;
+      }
+
+      .tlink-tagline {
+        font-size: 18px;
+      }
+    }
+
+    .tlink-section {
+      padding: 48px 0;
+
+      .tlink-section-title {
+        font-size: 28px;
+      }
+
+      .tlink-subtitle {
+        font-size: 16px;
+      }
+    }
+
+    .tlink-solution-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tlink-hardware-section {
+      .tlink-hardware-features,
+      .tlink-hardware-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tlink-flow-steps {
+      flex-direction: column;
+
+      .tlink-flow-arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    .tlink-toc {
+      .tlink-toc-nav {
+        gap: 12px;
+
+        button {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+    }
+
+    .tlink-pipeline {
+      flex-direction: column;
+
+      .tlink-pipeline-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
