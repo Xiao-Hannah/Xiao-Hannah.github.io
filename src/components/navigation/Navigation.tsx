@@ -50,11 +50,14 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <div className="nav-links">
-          <button onClick={() => scrollToSection('work')} className="nav-link">
-            Work
-          </button>
           <button onClick={() => scrollToSection('about')} className="nav-link">
             About
+          </button>
+          <button onClick={() => scrollToSection('experience')} className="nav-link">
+            Experience
+          </button>
+          <button onClick={() => scrollToSection('work')} className="nav-link">
+            Work
           </button>
           <button onClick={() => scrollToSection('for-fun')} className="nav-link">
             For Fun
@@ -77,11 +80,14 @@ const Navigation = () => {
       {/* Mobile Sidebar */}
       <div className={`mobile-sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-links">
-          <button onClick={() => scrollToSection('work')} className="mobile-nav-link">
-            Work
-          </button>
           <button onClick={() => scrollToSection('about')} className="mobile-nav-link">
             About
+          </button>
+          <button onClick={() => scrollToSection('experience')} className="mobile-nav-link">
+            Experience
+          </button>
+          <button onClick={() => scrollToSection('work')} className="mobile-nav-link">
+            Work
           </button>
           <button onClick={() => scrollToSection('for-fun')} className="mobile-nav-link">
             For Fun

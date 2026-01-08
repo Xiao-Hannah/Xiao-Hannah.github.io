@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FilmGrain from "@/components/layout/FilmGrain";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import Index from "@/pages/Index";
+import Atypica from "@/pages/Atypica";
 import Bloome from "@/pages/Bloome";
 import FridgeFriend from "@/pages/FridgeFriend";
 import TLink from "@/pages/TLink";
@@ -15,6 +16,7 @@ const App = () => {
       <FilmGrain />
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/atypica" element={<Atypica />} />
         <Route path="/bloome" element={<Bloome />} />
         <Route path="/fridgefriend" element={<FridgeFriend />} />
         <Route path="/tlink" element={<TLink />} />

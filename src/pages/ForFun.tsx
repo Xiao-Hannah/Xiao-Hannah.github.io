@@ -33,7 +33,6 @@ import travellingImage3 from "@/assets/images/travelling/travelling3.jpeg";
 import travellingImage4 from "@/assets/images/travelling/travelling4.jpg";
 import travellingImage5 from "@/assets/images/travelling/travelling5.jpg";
 import travellingImage6 from "@/assets/images/travelling/travelling6.jpg";
-import travellingImage7 from "@/assets/images/travelling/travelling7.jpg";
 import travellingImage8 from "@/assets/images/travelling/travelling8.jpg";
 
 // Import fun images
@@ -93,7 +92,6 @@ const items: FunItem[] = [
       travellingImage4,
       travellingImage5,
       travellingImage6,
-      travellingImage7,
       travellingImage8,
     ],
   },

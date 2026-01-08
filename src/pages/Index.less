@@ -87,6 +87,92 @@
   }
 }
 
+// Professional Experience Section
+.experience-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    var(--card) 10%,
+    var(--card) 90%,
+    transparent 100%
+  );
+
+  @media @mobile {
+    padding: 4rem 0;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+
+    .project-card {
+      background-color: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+      &:hover {
+        transform: translateY(-4px);
+        border-color: var(--primary);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+        align-items: start;
+
+        @media @mobile {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card-main {
+        .card-meta {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+
+          .card-category {
+            font-size: 0.875rem;
+            color: var(--primary);
+            font-weight: 500;
+          }
+
+          .card-year {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+
+            &::before {
+              content: '•';
+              margin-right: 1rem;
+            }
+          }
+        }
+
+        .card-title {
+          font-family: var(--font-display);
+          font-size: 1.75rem;
+          margin-bottom: 0.75rem;
+          color: var(--foreground);
+        }
+
+        .card-description {
+          color: var(--muted-foreground);
+          line-height: 1.7;
+        }
+      }
+
+      .card-underline {
+        display: none;
+      }
+    }
+  }
+}
+
 // Work Section
 .work-section {
   padding: 6rem 0;

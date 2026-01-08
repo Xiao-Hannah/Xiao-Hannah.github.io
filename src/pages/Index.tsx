@@ -7,7 +7,14 @@ import { ArrowDown, Mail, ArrowRight } from "lucide-react";
 import resume from "@/assets/files/resume.pdf";
 import './Index.less';
 
-const projects = [
+const professionalExperience = [
+  {
+    title: "Atypica AI - Product Growth",
+    description: "Led growth strategy for an AI consumer insights platform, driving 20% MRR growth and 30% activation rate increase through data-driven product improvements and multi-channel user acquisition.",
+    category: "Product Management & Growth Strategy",
+    year: "2025",
+    link: "/atypica",
+  },
   {
     title: "T-Mobile CareLink",
     description: "An integrated hardware and software solution for hypertension medication tracking, leveraging T-Mobile's 5G connectivity for real-time adherence monitoring.",
@@ -15,6 +22,9 @@ const projects = [
     year: "2024",
     link: "/tlink",
   },
+];
+
+const projects = [
   {
     title: "Bloomè",
     description: "An all-in-one platform helping users overcome period poverty through education, product accessibility, and community support.",
@@ -61,31 +71,12 @@ const Index = () => {
 
         <button
           className="scroll-indicator"
-          onClick={() => scrollToSection("work")}
-          aria-label="Scroll to work section"
+          onClick={() => scrollToSection("about")}
+          aria-label="Scroll to about section"
         >
           <span>Scroll</span>
           <ArrowDown className="icon" />
         </button>
-      </section>
-
-      {/* Work Section */}
-      <section id="work" className="work-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-number">01</span>
-            <h2>Selected Work</h2>
-            <p className="section-description">
-              Projects where research meets creativity, solving real problems for real people.
-            </p>
-          </div>
-
-          <div className="projects-list">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.title} {...project} index={index} />
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* About Section */}
@@ -93,7 +84,7 @@ const Index = () => {
         <div className="container">
           <div className="about-grid">
             <div className="about-main">
-              <span className="section-number">02</span>
+              <span className="section-number">01</span>
               <h2>About</h2>
 
               <div className="about-text">
@@ -131,11 +122,49 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Professional Experience Section */}
+      <section id="experience" className="experience-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-number">02</span>
+            <h2>Professional Experience</h2>
+            <p className="section-description">
+              Building products that bridge technology and human needs in professional settings.
+            </p>
+          </div>
+
+          <div className="experience-list">
+            {professionalExperience.map((experience, index) => (
+              <ProjectCard key={experience.title} {...experience} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Work Section */}
+      <section id="work" className="work-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-number">03</span>
+            <h2>Selected Work</h2>
+            <p className="section-description">
+              Projects where research meets creativity, solving real problems for real people.
+            </p>
+          </div>
+
+          <div className="projects-list">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.title} {...project} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* For Fun Section */}
       <section id="for-fun" className="for-fun-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-number">03</span>
+            <span className="section-number">04</span>
             <h2>For Fun</h2>
             <p className="section-description">
               Beyond design—exploring the world, capturing moments, and embracing new experiences.
@@ -174,7 +203,7 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="contact-section">
         <div className="container">
-          <span className="section-number">04</span>
+          <span className="section-number">05</span>
           <h2>Let's Connect</h2>
           <p className="contact-description">
             Always open to discussing new projects, collaborations, or opportunities.
