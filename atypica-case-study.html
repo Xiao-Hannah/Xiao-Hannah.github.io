@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atypica Case Study</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #1a1a1a;
+      --color-text-light: #666666;
+      --color-border: #e5e5e5;
+      --color-accent: #0066cc;
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --max-width: 720px;
+      --spacing-unit: 1.5rem;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    article {
+      padding: 2rem 0;
+    }
+
+    /* Typography */
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-light);
+      margin-bottom: 3rem;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-text);
+    }
+
+    h3 {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    em {
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section:first-of-type h2 {
+      margin-top: 2rem;
+    }
+
+    /* Image Placeholders */
+    .image-placeholder {
+      width: 100%;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e9e9e9 100%);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .image-placeholder::before {
+      content: "📷";
+      display: block;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    /* Responsive Images (for when real images are added) */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 3rem 0;
+      border-radius: 4px;
+    }
+
+    /* Links */
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.2s ease;
+    }
+
+    a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        font-size: 17px;
+        padding: 1.5rem 1.25rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        margin-top: 3rem;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+        margin-top: 2rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      .image-placeholder {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 16px;
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .image-placeholder {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        font-size: 12pt;
+        color: #000;
+      }
+
+      h1 {
+        font-size: 24pt;
+      }
+
+      h2 {
+        font-size: 18pt;
+      }
+
+      .image-placeholder {
+        border: 1px solid #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+
+      <h1>Atypica</h1>
+      <p class="subtitle">Helping creators and educators build sustainable businesses</p>
+
+      <section>
+        <h2>The Opportunity</h2>
+        <p>Atypica is a platform where creators and educators can monetize their knowledge and build engaged communities. When I joined, the product was solid—thousands of people were signing up every month. But we had a problem that most growth-focused teams overlook: most of these users disappeared.</p>
+        <p>They'd onboard, poke around, and ghost. By the second week, we'd lost 70% of new signups. It wasn't a product problem. It wasn't a marketing problem. It was that we had no idea <em>why</em> people were actually sticking around—or leaving.</p>
+      </section>
+
+      <img src="images/atypica/activation-workflow.png" alt="User activation journey workflow showing onboarding touchpoints and engagement sequences">
+
+      <section>
+        <h2>What I Uncovered</h2>
+        <p>I started by mapping where the losses were happening. The data told a story:</p>
+        <ul>
+          <li>People understood the value in the first 5 minutes</li>
+          <li>But they felt overwhelmed by features</li>
+          <li>And they didn't know what to do next</li>
+        </ul>
+        <p>While my team was pushing growth metrics, I realized we were optimizing the wrong thing. We needed retention first, then growth.</p>
+      </section>
+
+
+      <section>
+        <h2>What We Changed</h2>
+
+        <h3>On Activation</h3>
+        <p>I worked with our design team to simplify the experience. The homepage had too much information competing for attention. We restructured the hierarchy so new users could focus on one action at a time. More importantly, we added a "discussion mode"—a lighter, less intimidating way to start collaborating. It made the platform feel more like a community hangout than a professional tool.</p>
+        <p>I also dug into when and how people were actually getting value. Using tour analytics and push notifications, I identified the exact moments users needed guidance, and restructured our onboarding to meet them there instead of bombarding them upfront. Users who completed the new onboarding stayed <strong>3x longer</strong>.</p>
+
+        <img src="images/atypica/homepage-redesign.png" alt="Redesigned Atypica homepage featuring 'Start Your Study' with simplified, focused interface">
+
+        <h3>On Monetization</h3>
+        <p>I looked at who was actually paying, and discovered something counterintuitive: it wasn't our "target customer." A creator in Southeast Asia had completely different payment psychology than one in North America. They didn't just have less disposable income—they fundamentally thought about paying for tools differently.</p>
+        <p>Instead of building one-size-fits-all pricing, I worked with the team to segment our users by region and creator type. We created different value props and pricing tiers for each. Within three months, our conversion rate increased by 40%, and we stopped seeing revenue concentrated in just two markets.</p>
+
+        <h3>On Growth</h3>
+        <p>With retention working better, we could finally grow sustainably. I ran KOL partnerships and a campus ambassador program—but this time, we weren't just chasing signups. We targeted creators whose values aligned with our platform's culture. The ambassadors we recruited became our best long-term users. We also did a focused Product Hunt launch that wasn't just about the day's ranking; it gave us 200+ early evangelists who actually stuck around.</p>
+
+        <img src="images/atypica/weekly-update-modal.png" alt="Weekly engagement update introducing Discussion Mode feature to keep users informed and active">
+      </section>
+
+      <section>
+        <h2>What It Meant</h2>
+        <p>By the time I left, we'd gone from 70% churn to sustainable retention curves. Revenue was diversified across regions. And our growth was finally coming from people who actually wanted to be there, not just people trying us out.</p>
+        <p>What I learned: <strong>retention isn't the opposite of growth—it's the foundation for it.</strong> The companies that look like they're moving fast are usually just moving fast on the wrong metric. The ones that really grow are the ones that get obsessed with understanding why people stay.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <script>
+    // Optional: Subtle scroll animations
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('section, .image-placeholder').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>
