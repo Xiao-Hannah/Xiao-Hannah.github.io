@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import './Atypica.less';
 
 const STORAGE_KEY = 'atypica-auth';
-const CORRECT_PASSWORD = 'please';
+const CORRECT_PASSWORD = 'launch';
 
 const Atypica = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
