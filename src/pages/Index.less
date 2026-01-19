@@ -20,6 +20,10 @@
   }
 
   .hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
     opacity: 0;
     transform: translateY(2rem);
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -27,6 +31,29 @@
     &.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    @media @tablet {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media @mobile {
+      gap: 2rem;
+    }
+  }
+
+  .hero-text-column {
+    max-width: 48rem;
+  }
+
+  .hero-image-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media @tablet {
+      justify-content: center;
     }
   }
 
@@ -42,11 +69,35 @@
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 7vw, 4.5rem);
     line-height: 1.2;
-    max-width: 64rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    line-height: 1.6;
+    color: var(--foreground);
 
     .highlight {
       font-style: italic;
       color: var(--primary);
+    }
+  }
+
+  .hero-profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    @media @tablet {
+      width: 160px;
+      height: 160px;
+    }
+
+    @media @mobile {
+      width: 120px;
+      height: 120px;
     }
   }
 
@@ -261,6 +312,51 @@
     p {
       color: var(--muted-foreground);
       line-height: 1.7;
+    }
+
+    // Add visual separation before the scope-based group
+    &:nth-child(3) {
+      margin-top: 3.5rem;
+
+      @media @mobile {
+        margin-top: 3rem;
+      }
+    }
+
+    // Reduce visual weight of scope-based headings
+    &:nth-child(3),
+    &:nth-child(4) {
+      h3 {
+        font-size: 1.125rem;
+        color: var(--primary);
+      }
+    }
+  }
+
+  .about-additional {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @media @mobile {
+      margin-top: 3rem;
+      gap: 2rem;
+    }
+  }
+
+  .about-section-item {
+    h3 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+      color: var(--foreground);
+    }
+
+    p {
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      font-size: 1rem;
     }
   }
 }
