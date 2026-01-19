@@ -45,21 +45,13 @@ const Bloome = () => {
                 <p>User Interviews</p>
               </div>
               <div className="bloome-meta-about">
+                <h3>Project Context</h3>
+                <p>
+                  Google UX Design Certificate project created out of personal interest in understanding end-to-end UX design processes.
+                </p>
                 <h3>Introduction</h3>
                 <p>
-                  Bloomè is an innovative digital platform designed to transform the
-                  floral shopping experience. Recognizing that selecting the perfect
-                  bouquet can be a time-consuming challenge for many, Bloomè
-                  simplifies this process with cutting-edge features including
-                  Augmented Reality (AR) Preview, Customized Bouquets, and Weekly Delivery Service.
-                </p>
-                <h3>Journey from concept to creation</h3>
-                <p>
-                  Over an intense month of design and development, Bloomè evolved
-                  from a mere idea to a user-centric platform. The process was
-                  anchored in deep empathy for our users through innovative
-                  empathy exercises, vibrant ideation sessions, and iterative
-                  prototyping informed by rigorous usability testing.
+                  Bloomè is a digital platform designed to simplify floral shopping through AR Preview, Customized Bouquets, and Weekly Delivery Service. The project evolved through empathy exercises, ideation sessions, and iterative prototyping informed by usability testing.
                 </p>
               </div>
             </div>

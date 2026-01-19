@@ -3,11 +3,18 @@
 @import '../styles/mixins.less';
 
 .atypica-page {
-  --atypica-primary: #6366f1;
-  --atypica-primary-dark: #4f46e5;
-  --atypica-accent: #fbbf24;
+  --atypica-primary: #3b82f6;
+  --atypica-primary-dark: #2563eb;
+  --atypica-secondary: #10b981;
+  --atypica-accent: #00ff88;
+  --atypica-bg: #0a0a0a;
+  --atypica-card-bg: #1a1a1a;
+  --atypica-border: #2a2a2a;
+  --atypica-text: #ffffff;
+  --atypica-text-muted: #a0a0a0;
 
-  background: var(--background);
+  background: var(--atypica-bg);
+  color: var(--atypica-text);
 
   // Password Gate
   .password-gate {
@@ -21,9 +28,10 @@
       max-width: 28rem;
       width: 100%;
       text-align: center;
-      background: var(--card);
+      background: var(--atypica-card-bg);
       padding: 3rem 2rem;
-      border: 1px solid var(--border);
+      border: 1px solid var(--atypica-border);
+      border-radius: 0.75rem;
 
       .password-gate-icon {
         display: inline-flex;
@@ -31,7 +39,7 @@
         justify-content: center;
         width: 5rem;
         height: 5rem;
-        background: var(--background);
+        background: var(--atypica-bg);
         border-radius: 50%;
         color: var(--atypica-primary);
         margin-bottom: 1.5rem;
@@ -41,11 +49,11 @@
         font-family: var(--font-display);
         font-size: 1.5rem;
         margin-bottom: 0.75rem;
-        color: var(--foreground);
+        color: var(--atypica-text);
       }
 
       p {
-        color: var(--muted-foreground);
+        color: var(--atypica-text-muted);
         margin-bottom: 2rem;
         font-size: 0.938rem;
       }
@@ -58,18 +66,20 @@
         .password-input {
           padding: 0.75rem 1rem;
           font-size: 1rem;
-          border: 1px solid var(--border);
-          background: var(--background);
-          color: var(--foreground);
+          border: 1px solid var(--atypica-border);
+          background: var(--atypica-bg);
+          color: var(--atypica-text);
           font-family: inherit;
+          border-radius: 0.5rem;
 
           &:focus {
             outline: none;
             border-color: var(--atypica-primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
           }
 
           &::placeholder {
-            color: var(--muted-foreground);
+            color: var(--atypica-text-muted);
           }
         }
 
@@ -87,11 +97,15 @@
           font-size: 0.938rem;
           font-weight: 500;
           cursor: pointer;
-          transition: background 0.2s ease;
+          border-radius: 0.5rem;
+          transition: all 0.3s ease;
           font-family: inherit;
+          box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
 
           &:hover {
             background: var(--atypica-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(14, 165, 233, 0.3);
           }
         }
       }
@@ -101,10 +115,43 @@
   // Hero Section
   .atypica-hero {
     padding: 8rem 0 4rem;
-    background: var(--card);
+    background: var(--atypica-bg);
+    border-bottom: 1px solid var(--atypica-border);
 
     @media @mobile {
       padding: 6rem 0 3rem;
+    }
+
+    .atypica-hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+
+      @media @mobile {
+        flex-direction: column;
+      }
+    }
+
+    .atypica-hero-text {
+      flex: 1;
+    }
+
+    .atypica-hero-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: 0.85;
+
+      @media @tablet {
+        width: 96px;
+        height: 96px;
+      }
+
+      @media @mobile {
+        display: none;
+      }
     }
 
     .atypica-title {
@@ -112,12 +159,12 @@
       font-size: clamp(2rem, 6vw, 3.5rem);
       line-height: 1.2;
       margin-bottom: 1.5rem;
-      color: var(--foreground);
+      color: var(--atypica-text);
     }
 
     .atypica-subtitle {
       font-size: clamp(1.125rem, 3vw, 1.375rem);
-      color: var(--muted-foreground);
+      color: var(--atypica-text-muted);
       margin-bottom: 1rem;
       line-height: 1.6;
       max-width: 50rem;
@@ -125,7 +172,7 @@
 
     .atypica-role-line {
       font-size: 0.875rem;
-      color: var(--muted-foreground);
+      color: var(--atypica-text-muted);
       margin-bottom: 3rem;
     }
 
@@ -208,15 +255,19 @@
     .atypica-btn {
       display: inline-block;
       padding: 0.75rem 1.5rem;
-      background: var(--atypica-primary);
-      color: white;
+      background: var(--atypica-accent);
+      color: var(--atypica-bg);
       text-decoration: none;
       font-weight: 500;
       font-size: 0.938rem;
-      transition: background 0.2s ease;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
 
       &:hover {
-        background: var(--atypica-primary-dark);
+        background: var(--atypica-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 255, 136, 0.3);
       }
     }
   }
@@ -225,8 +276,9 @@
   .atypica-toc {
     position: sticky;
     top: 60px;
-    background: var(--background);
-    border-bottom: 1px solid var(--border);
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--atypica-border);
     z-index: 40;
     padding: 1rem 0;
 
@@ -243,13 +295,15 @@
         font-size: 0.875rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: var(--muted-foreground);
+        color: var(--atypica-text-muted);
         white-space: nowrap;
-        padding: 0.5rem 0;
-        transition: color 0.2s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        transition: all 0.2s ease;
 
         &:hover {
-          color: var(--atypica-primary);
+          color: var(--atypica-accent);
+          background: rgba(0, 255, 136, 0.1);
         }
       }
     }
@@ -258,6 +312,7 @@
   // Common Section Styles
   .atypica-section {
     padding: 4rem 0;
+    border-bottom: 1px solid var(--atypica-border);
 
     @media @mobile {
       padding: 3rem 0;
@@ -267,12 +322,12 @@
       font-family: var(--font-display);
       font-size: clamp(1.75rem, 4vw, 2.25rem);
       margin-bottom: 1rem;
-      color: var(--foreground);
+      color: var(--atypica-text);
     }
 
     .atypica-section-subtitle {
       font-size: 1.125rem;
-      color: var(--muted-foreground);
+      color: var(--atypica-text-muted);
       margin-bottom: 3rem;
       line-height: 1.7;
     }
@@ -294,12 +349,12 @@
         font-family: var(--font-display);
         font-size: 1.5rem;
         margin-bottom: 1rem;
-        color: var(--foreground);
+        color: var(--atypica-text);
       }
 
       p {
         font-size: 1rem;
-        color: var(--muted-foreground);
+        color: var(--atypica-text-muted);
         line-height: 1.7;
         margin-bottom: 1.25rem;
       }
@@ -374,9 +429,134 @@
     }
   }
 
+  // Problem Blocks
+  .problem-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media @tablet {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .problem-block {
+    background: var(--atypica-card-bg);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--atypica-border);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--atypica-primary);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+      transform: translateY(-4px);
+    }
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: var(--atypica-text);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.938rem;
+      color: var(--atypica-text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
   // Approach Section
   .atypica-approach-section {
-    background: var(--card);
+    background: var(--atypica-bg);
+  }
+
+  .approach-subsection {
+    margin-bottom: 4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .approach-subsection-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--atypica-text);
+    margin-bottom: 2rem;
+  }
+
+  .approach-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media @tablet {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .approach-block {
+    background: var(--atypica-card-bg);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--atypica-border);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--atypica-accent);
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+      transform: translateY(-4px);
+    }
+
+    h4 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--atypica-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.938rem;
+      color: var(--atypica-text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+
+  .approach-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1rem;
+      color: var(--atypica-text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      padding-left: 1.75rem;
+      position: relative;
+
+      &:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--atypica-accent);
+        font-weight: 700;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .atypica-phase {
@@ -987,7 +1167,7 @@
 
   // Impact Section
   .atypica-impact-section {
-    background: var(--background);
+    background: var(--atypica-bg);
   }
 
   .impact-charts {
@@ -1203,6 +1383,136 @@
         font-size: 0.938rem;
         color: var(--muted-foreground);
         line-height: 1.7;
+      }
+    }
+  }
+
+  // Image Container
+  .atypica-image-container {
+    margin: 3rem 0;
+
+    .atypica-case-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .image-caption {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      text-align: center;
+      font-style: italic;
+      line-height: 1.5;
+    }
+  }
+
+  // Insight List
+  .insight-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 2rem 0;
+
+    li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      color: var(--atypica-text-muted);
+
+      &:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--atypica-accent);
+        font-weight: 600;
+      }
+
+      strong {
+        color: var(--atypica-text);
+      }
+    }
+  }
+
+  // Impact Stats Row
+  .impact-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+
+    @media @tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat-card {
+    background: var(--atypica-card-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--atypica-border);
+    text-align: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--atypica-secondary);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--atypica-secondary);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-display);
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--atypica-text);
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-context {
+      font-size: 0.875rem;
+      color: var(--atypica-text-muted);
+      line-height: 1.6;
+    }
+  }
+
+  // Final Insight
+  .final-insight {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--card);
+    border-radius: 8px;
+    border-left: 4px solid var(--atypica-primary);
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--foreground);
+      margin-bottom: 1.25rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      strong {
+        color: var(--atypica-primary);
+        font-weight: 600;
       }
     }
   }

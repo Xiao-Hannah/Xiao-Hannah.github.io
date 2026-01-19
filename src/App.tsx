@@ -6,6 +6,7 @@ import Atypica from "@/pages/Atypica";
 import Bloome from "@/pages/Bloome";
 import FridgeFriend from "@/pages/FridgeFriend";
 import TLink from "@/pages/TLink";
+import Zebra from "@/pages/Zebra";
 import ForFun from "@/pages/ForFun";
 import NotFound from "@/pages/NotFound";
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/bloome" element={<Bloome />} />
         <Route path="/fridgefriend" element={<FridgeFriend />} />
         <Route path="/tlink" element={<TLink />} />
+        <Route path="/zebra" element={<Zebra />} />
         <Route path="/for-fun" element={<ForFun />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

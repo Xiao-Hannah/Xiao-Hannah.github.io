@@ -77,11 +77,13 @@ const FridgeFriend = () => {
                 <p>Stakeholder + User Interviews</p>
               </div>
               <div className="ff-meta-about">
+                <h3>Project Context</h3>
+                <p>
+                  Group project for Human Centered Design and Innovation at Columbia University.
+                </p>
                 <h3>Project Overview</h3>
                 <p>
-                  Food wastage is a growing concern. With nearly 40% of food in the U.S. being wasted
-                  and families losing approximately $1,500 a year on thrown-out groceries, we are
-                  constantly seeking ways to save both time and money. This is where{" "}
+                  With nearly 40% of food in the U.S. being wasted and families losing approximately $1,500 a year on thrown-out groceries,{" "}
                   <a
                     href="https://www.youtube.com/watch?v=y9LqWhmTMeQ"
                     target="_blank"
@@ -90,18 +92,7 @@ const FridgeFriend = () => {
                   >
                     FridgeFriend
                   </a>{" "}
-                  steps in, revolutionizing the way we interact with our kitchen.
-                </p>
-                <p>
-                  Over the course of a semester, our team developed a mobile application coupled with
-                  a 3D digital twin, transforming the kitchen experience. As the project leader, I
-                  spearheaded the integration of a user-friendly interface with practical product design.
-                  Key features include: Auto-Restocking, Automatic Recipe Generator, and In-Fridge Camera System.
-                </p>
-                <p>
-                  FridgeFriend was met with enthusiastic feedback during our final presentation,
-                  particularly because it simplifies the decision-making process, making sustainable
-                  living both intuitive and effortless.
+                  is an AI-powered kitchen companion that helps reduce food waste through Auto-Restocking, Recipe Generator, and In-Fridge Camera System.
                 </p>
               </div>
             </div>
@@ -114,7 +105,6 @@ const FridgeFriend = () => {
         <div className="container">
           <nav className="ff-toc-nav">
             <button onClick={() => scrollToSection('solution')}>Solution</button>
-            <button onClick={() => scrollToSection('process')}>Process</button>
             <button onClick={() => scrollToSection('ideation')}>Ideation</button>
             <button onClick={() => scrollToSection('evaluation')}>Evaluation</button>
             <button onClick={() => scrollToSection('iteration')}>Iteration</button>

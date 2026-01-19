@@ -32,7 +32,7 @@ const TLink = () => {
               <img src={logo} alt="T-Mobile CareLink" className="tlink-logo" />
             </div>
             <h1 className="tlink-title">
-              T-Mobile CareLink: Hypertension Medication Tracking
+              T-Mobile: Hypertension Medication Tracking
             </h1>
             <p className="tlink-tagline">
               An integrated hardware and software solution leveraging T-Mobile's 5G connectivity
@@ -60,18 +60,10 @@ const TLink = () => {
               <div className="tlink-meta-about">
                 <h3>Project Overview</h3>
                 <p>
-                  Globally, hypertension affects over 1 billion people, yet poor medication
-                  adherence (30-40%) remains a major barrier to effective treatment. Patients
-                  lack simple, connected tools to track medication, monitor blood pressure,
-                  and stay engaged with their care plans.
+                  Hypertension affects over 1 billion people globally, yet 30-40% of patients struggle with medication adherence due to forgetfulness and lack of connected tracking tools.
                 </p>
                 <p>
-                  As Product Manager and Developer, I led the development of CareLink—a
-                  two-part system combining a smart pill box with dual web portals for
-                  patients and doctors. The biggest technical challenge was integrating
-                  our hardware device with the web platform, requiring seamless real-time
-                  data synchronization between pill detection sensors, gesture-tracking camera,
-                  and cloud database via T-Mobile's 5G network.
+                  As Product Manager and Developer, I led CareLink - a smart pill box integrated with dual web portals for patients and doctors. The system uses sensors, gesture-tracking, and T-Mobile 5G to enable real-time medication tracking and verification.
                 </p>
                 <div className="tlink-links">
                   <a
@@ -144,18 +136,13 @@ const TLink = () => {
             </div>
             <div className="tlink-problem-text">
               <p>
-                The most prevalent reasons for poor adherence include: <strong>forgetfulness</strong>,
-                failure to perceive the need for medication, fear of side effects, and low self-efficacy—placing
-                additional stress on caregivers, especially for elderly patients.
+                Poor medication adherence stems from forgetfulness, lack of perceived need, fear of side effects, and low self-efficacy - placing significant burden on caregivers of elderly patients.
               </p>
               <p>
-                Despite the scale of the problem, patients lack simple, connected tools to track
-                medication, monitor blood pressure, and stay engaged with their care plans.
+                Patients lack simple, connected tools to track medication, monitor blood pressure, and stay engaged with their care plans.
               </p>
               <div className="tlink-highlight">
-                There is a clear need for an integrated hardware and software solution that
-                leverages T-Mobile's connectivity to enable real-time tracking, reminders, and
-                data sharing—empowering patients, reducing caregiver burden, and improving health outcomes.
+                An integrated hardware and software solution leveraging T-Mobile's connectivity can enable real-time tracking, reminders, and data sharing - empowering patients and reducing caregiver burden.
               </div>
             </div>
           </div>
@@ -427,6 +414,9 @@ const TLink = () => {
           <p className="tlink-subtitle">
             Separate, tailored experiences for patients and healthcare providers
           </p>
+          <p className="tlink-portal-intro">
+            My main development work focused on building these web portals, creating the frontend architecture, implementing real-time data synchronization with Firebase, and designing the user interfaces for both patient and doctor experiences.
+          </p>
 
           {/* Login */}
           <div className="tlink-portal-showcase">
@@ -503,7 +493,7 @@ const TLink = () => {
           {/* Pill Reminder Feature */}
           <div className="tlink-portal-showcase">
             <h3>Smart Notifications</h3>
-            <img src={pillReminderImg} alt="Pill reminder notification" className="tlink-portal-image-small" />
+            <img src={pillReminderImg} alt="Pill reminder notification" className="tlink-portal-image" />
             <p>
               Time-based medication reminders that sync with the hardware device's LED indicators
             </p>
@@ -517,23 +507,13 @@ const TLink = () => {
           <h2 className="tlink-section-title">Reflection</h2>
           <div className="tlink-reflection-content">
             <p className="tlink-text-block">
-              This 3-month capstone project at the University of Washington GIX program taught me
-              invaluable lessons about integrating hardware and software systems. As both Product
-              Manager and Developer, I navigated the complexity of coordinating between hardware
-              prototyping, embedded systems programming, backend development, and frontend design.
+              This 3-month capstone project taught me how to integrate hardware and software systems. As Product Manager and Developer, I coordinated hardware prototyping, embedded systems programming, backend development, and frontend design.
             </p>
             <p className="tlink-text-block">
-              <strong>The biggest technical challenge</strong> was achieving seamless real-time
-              synchronization between our physical device and web platform. Solving the voltage divider
-              issue required deep debugging of PCB schematics, while integrating dual data streams
-              (photoresistors and camera) demanded creative server architecture with Flask as our
-              middleware layer.
+              The biggest technical challenge was achieving real-time synchronization between the physical device and web platform. This required debugging PCB schematics for the voltage divider issue and building a Flask server to integrate dual data streams into Firebase.
             </p>
             <p className="tlink-text-block">
-              From a product perspective, I learned the importance of <strong>user-centered design
-              in healthcare</strong>. Every technical decision—from gesture detection algorithms to
-              portal UI layouts—was driven by the needs of elderly patients and busy healthcare providers.
-              The positive reception during our final presentation validated this approach.
+              Every technical decision - from gesture detection algorithms to portal UI - was driven by the needs of elderly patients and healthcare providers. The positive reception during our final presentation validated this user-centered approach.
             </p>
             <div className="tlink-outcomes">
               <h3>Key Outcomes</h3>

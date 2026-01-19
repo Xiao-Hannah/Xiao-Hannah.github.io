@@ -9,14 +9,21 @@ import './Index.less';
 
 const professionalExperience = [
   {
-    title: "Atypica AI - Product Growth",
-    description: "Led growth strategy for an AI consumer insights platform, driving 20% MRR growth and 30% activation rate increase through data-driven product improvements and multi-channel user acquisition.",
+    title: "Atypica AI (Product Growth)",
+    description: "Led growth strategy for an AI consumer insights platform, driving MRR growth and activation rate increase through data-driven product improvements and multi-channel user acquisition.",
     category: "Product Management & Growth Strategy",
     year: "2025",
     link: "/atypica",
   },
   {
-    title: "T-Mobile CareLink",
+    title: "Zebra Workcloud Clock App (Product Management)",
+    description: "Strengthened authentication and security for frontline workforce management through NFC feasibility study and biometric platform integration.",
+    category: "Product Management & Technical Integration",
+    year: "2025",
+    link: "/zebra",
+  },
+  {
+    title: "T-Mobile CareLink (Product Management & Development)",
     description: "An integrated hardware and software solution for hypertension medication tracking, leveraging T-Mobile's 5G connectivity for real-time adherence monitoring.",
     category: "Product Management & Full-Stack Development",
     year: "2024",
@@ -62,10 +69,16 @@ const Index = () => {
       <section className="hero-section">
         <div className="container">
           <div className={`hero-content ${heroVisible ? 'visible' : ''}`}>
-            <p className="hero-label">Product Manager</p>
-            <h1 className="hero-title">
-              Driving <span className="highlight">product growth</span> by turning user insights into <span className="highlight">experiments</span> across the funnel.
-            </h1>
+            <div className="hero-text-column">
+              <p className="hero-label">Product Manager</p>
+              <h1 className="hero-title">Hi, I'm Hannah.</h1>
+              <p className="hero-subtitle">
+                I make impact by turning <span className="highlight">fuzzy user insights</span> into <span className="highlight">clear product decisions</span>.
+              </p>
+            </div>
+            <div className="hero-image-column">
+              <img src="/images/profile.jpg" alt="Hannah" className="hero-profile-photo" />
+            </div>
           </div>
         </div>
 
@@ -89,14 +102,13 @@ const Index = () => {
 
               <div className="about-text">
                 <p>
-                  I'm a product manager who believes creativity is the heart of everything.
-                  With my anthropology and economics background at Columbia, I am deeply
-                  interested in human connections and narratives. This passion for
-                  understanding people drives everything I create.
+                  I'm a product manager interested in how research, data, and human behavior turn into real product decisions.
                 </p>
                 <p>
-                  With a M.S. degree at University of Washington, I want to create meaningful
-                  digital experiences for my users through data and prototyping.
+                  With a background in anthropology and economics, I enjoy working on ambiguous problems, where understanding people matters as much as building systems.
+                </p>
+                <p>
+                  Across growth, B2B, and B2C products, I've worked on turning early questions into clear directions through experimentation, research, and prototyping.
                 </p>
               </div>
             </div>
@@ -105,17 +117,25 @@ const Index = () => {
               <div className="about-block">
                 <h3>Currently</h3>
                 <p>
-                  Based in Seattle, pursuing a master's degree at the University of Washington,
-                  focusing on how research and data translate into product decisions.
+                  Based in Seattle, pursuing an M.S. in Technology Innovation at the University of Washington, focused on turning research and data into product decisions.
                 </p>
               </div>
 
               <div className="about-block">
                 <h3>Previously</h3>
                 <p>
-                  Experience across consulting, market research, and product management, often
-                  working where ambiguity turns into clarity.
+                  Studied Anthropology and Economics at Columbia University, where I became deeply interested in human behavior, narratives, and systems.
                 </p>
+              </div>
+
+              <div className="about-block">
+                <h3>What I Work On</h3>
+                <p>Growth · AI-powered Products · Platform Strategy · Product Optimization</p>
+              </div>
+
+              <div className="about-block">
+                <h3>Where I've Worked</h3>
+                <p>Large-scale Platforms · Early-stage Startups</p>
               </div>
             </div>
           </div>

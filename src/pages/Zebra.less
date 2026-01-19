@@ -1,0 +1,429 @@
+// Zebra Workcloud Clock App Page Styles
+@import '../styles/variables.less';
+@import '../styles/mixins.less';
+
+// Zebra Brand Colors
+@zebra-blue: #0066CC;
+@zebra-black: #000000;
+@zebra-gray: #53565A;
+@zebra-light-gray: #F5F5F5;
+@zebra-white: #FFFFFF;
+
+.zebra-page {
+  background: @zebra-white;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  // Password Gate
+  .password-gate {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+
+    .password-gate-content {
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .password-gate-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+      color: @zebra-blue;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      color: @zebra-black;
+      margin-bottom: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: @zebra-gray;
+      margin-bottom: 32px;
+    }
+
+    .password-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .password-input {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      border: 2px solid @zebra-light-gray;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: @zebra-blue;
+      }
+    }
+
+    .password-error {
+      color: #dc2626;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .password-submit {
+      padding: 16px 32px;
+      background: @zebra-blue;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: darken(@zebra-blue, 10%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // Hero Section
+  .zebra-hero {
+    padding: 120px 0 80px;
+    background: @zebra-light-gray;
+
+    .zebra-hero-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .zebra-hero-text {
+      max-width: 800px;
+    }
+
+    .zebra-title {
+      font-size: 48px;
+      font-weight: 600;
+      color: @zebra-black;
+      margin-bottom: 16px;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+
+    .zebra-subtitle {
+      font-size: 20px;
+      color: @zebra-gray;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .zebra-role-line {
+      font-size: 16px;
+      color: @zebra-gray;
+      margin-bottom: 32px;
+    }
+
+    .zebra-hero-logo {
+      width: 120px;
+      height: auto;
+
+      @media (max-width: 768px) {
+        width: 100px;
+      }
+    }
+
+    .zebra-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .zebra-btn {
+      display: inline-block;
+      padding: 12px 32px;
+      background: @zebra-blue;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: darken(@zebra-blue, 10%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // Table of Contents
+  .zebra-toc {
+    background: @zebra-black;
+    padding: 20px 0;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+
+    .zebra-toc-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+
+      button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: @zebra-blue;
+        }
+      }
+    }
+  }
+
+  // Common Section Styles
+  .zebra-section {
+    padding: 80px 0;
+
+    @media (max-width: 768px) {
+      padding: 48px 0;
+    }
+
+    .zebra-section-title {
+      font-size: 40px;
+      font-weight: 600;
+      color: @zebra-black;
+      margin-bottom: 32px;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+    .zebra-context-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+
+      @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    .zebra-context-text {
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: @zebra-gray;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .zebra-subsection-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: @zebra-black;
+        margin-top: 40px;
+        margin-bottom: 12px;
+
+        &:first-of-type {
+          margin-top: 32px;
+        }
+      }
+
+      .zebra-simple-list {
+        list-style: disc;
+        padding-left: 24px;
+        margin: 0 0 24px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        li {
+          font-size: 17px;
+          line-height: 1.7;
+          color: @zebra-gray;
+          padding: 6px 0;
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::marker {
+            color: @zebra-blue;
+          }
+        }
+      }
+    }
+
+    .zebra-context-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .zebra-context-main {
+      max-width: 800px;
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: @zebra-gray;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .zebra-subsection-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: @zebra-black;
+        margin-top: 40px;
+        margin-bottom: 12px;
+
+        &:first-of-type {
+          margin-top: 32px;
+        }
+      }
+
+      .zebra-subsection-intro {
+        font-size: 17px;
+        line-height: 1.7;
+        color: @zebra-gray;
+        margin-bottom: 16px;
+        font-style: italic;
+      }
+
+      .zebra-simple-list {
+        list-style: disc;
+        padding-left: 24px;
+        margin: 0 0 24px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        li {
+          font-size: 17px;
+          line-height: 1.7;
+          color: @zebra-gray;
+          padding: 6px 0;
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &::marker {
+            color: @zebra-blue;
+          }
+        }
+      }
+    }
+  }
+
+  // Approach Section
+  .zebra-approach-section {
+    background: @zebra-light-gray;
+  }
+
+  // Result Section
+  .zebra-result-section {
+    background: @zebra-white;
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .zebra-hero {
+      padding: 80px 0 40px;
+
+      .zebra-hero-content {
+        gap: 24px;
+      }
+    }
+
+    .zebra-toc {
+      .zebra-toc-nav {
+        gap: 12px;
+
+        button {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+    }
+
+    .zebra-section {
+      .zebra-context-text,
+      .zebra-context-main {
+        .zebra-subsection-title {
+          font-size: 18px;
+          margin-top: 28px;
+        }
+
+        .zebra-subsection-intro {
+          font-size: 16px;
+        }
+
+        .zebra-simple-list {
+          padding-left: 20px;
+
+          li {
+            font-size: 16px;
+            padding: 4px 0;
+          }
+        }
+      }
+
+      .zebra-context-image {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

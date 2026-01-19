@@ -80,9 +80,14 @@
 
       .tlink-links {
         display: flex;
-        gap: 16px;
+        gap: 12px;
         margin-top: 24px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        @media (max-width: 1024px) {
+          flex-wrap: wrap;
+        }
       }
 
       .tlink-btn {
@@ -484,7 +489,7 @@
   // Pipeline
   .tlink-pipeline {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     margin-top: 32px;
     background: @tmobile-light-gray;
@@ -690,21 +695,23 @@
       .tlink-outcome {
         display: flex;
         align-items: flex-start;
-        gap: 16px;
+        gap: 20px;
         background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
+        padding: 28px;
         border-radius: 12px;
         backdrop-filter: blur(10px);
 
         .tlink-outcome-icon {
-          font-size: 28px;
+          font-size: 32px;
           flex-shrink: 0;
+          margin-top: 2px;
         }
 
         p {
-          font-size: 16px;
-          line-height: 1.6;
+          font-size: 18px;
+          line-height: 1.7;
           margin: 0;
+          font-weight: 400;
         }
       }
     }
