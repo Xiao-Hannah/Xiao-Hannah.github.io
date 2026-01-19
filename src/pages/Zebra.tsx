@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Lock } from "lucide-react";
 import Navigation from "@/components/navigation/Navigation";
 import Footer from "@/components/layout/Footer";
+import zebraLogo from "@/assets/images/zebra/zebra.jpg";
+import clockinImage from "@/assets/images/zebra/clockin.jpg";
 import './Zebra.less';
 
 const STORAGE_KEY = 'zebra-auth';
@@ -101,7 +103,7 @@ const Zebra = () => {
                 </a>
               </div>
             </div>
-            <img src="/images/zebra.jpg" alt="Zebra Technologies" className="zebra-hero-logo" />
+            <img src={zebraLogo} alt="Zebra Technologies" className="zebra-hero-logo" />
           </div>
         </div>
       </section>
@@ -138,7 +140,7 @@ const Zebra = () => {
             </div>
 
             <div className="zebra-context-image">
-              <img src="/images/clockin.jpg" alt="Workcloud Clock App in use" />
+              <img src={clockinImage} alt="Workcloud Clock App in use" />
             </div>
           </div>
         </div>

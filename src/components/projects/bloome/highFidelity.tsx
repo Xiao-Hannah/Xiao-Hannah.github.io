@@ -1,7 +1,7 @@
 import React from "react";
-import highFidelity1 from "./../../../assets/images/bloome/prototype/highFidelity1.png";
-import highFidelity2 from "./../../../assets/images/bloome/prototype/highFidelity2.png";
-import highFidelity3 from "./../../../assets/images/bloome/prototype/highFidelity3.png";
+import highFidelity1 from "@/assets/images/bloome/prototype/highFidelity1.png";
+import highFidelity2 from "@/assets/images/bloome/prototype/highFidelity2.png";
+import highFidelity3 from "@/assets/images/bloome/prototype/highFidelity3.png";
 
 export const HighFidelity = () => {
   return (

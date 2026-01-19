@@ -2,15 +2,15 @@ import React from "react";
 import { useWindowDimensions } from "../../../hooks/hooks";
 import { Element, Link } from "react-scroll";
 import { SolutionCarousel } from "./solutionCarousel";
-import solutionFull from "./../../../assets/images/bloome/solution/solution-full.png";
+import solutionFull from "@/assets/images/bloome/solution/solution-full.png";
 import { ProcessElement } from "./processElement";
 import { SolutionDesign1 } from "./solutionDesign1";
 import { SolutionDesign2 } from "./solutionDesign2";
-import persona1Journey from "./../../../assets/images/bloome/emphasize/persona1Journey.png";
-import persona2Journey from "./../../../assets/images/bloome/emphasize/persona2Journey.png";
-import competitor from "./../../../assets/images/bloome/ideate/competitor.png";
-import userFlow from "./../../../assets/images/bloome/prototype/userflow.png";
-import lowFidelity from "./../../../assets/images/bloome/prototype/lowFidelity.png";
+import persona1Journey from "@/assets/images/bloome/emphasize/persona1Journey.png";
+import persona2Journey from "@/assets/images/bloome/emphasize/persona2Journey.png";
+import competitor from "@/assets/images/bloome/ideate/competitor.png";
+import userFlow from "@/assets/images/bloome/prototype/userflow.png";
+import lowFidelity from "@/assets/images/bloome/prototype/lowFidelity.png";
 import { HighFidelity } from "./highFidelity";
 
 export const Bloome = () => {

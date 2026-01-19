@@ -1,6 +1,6 @@
 import React from "react";
-import persona2 from "./../../../assets/images/bloome/emphasize/persona2.png";
-import persona2Mobile from "./../../../assets/images/bloome/emphasize/persona2Mobile.png";
+import persona2 from "@/assets/images/bloome/emphasize/persona2.png";
+import persona2Mobile from "@/assets/images/bloome/emphasize/persona2Mobile.png";
 import { useWindowDimensions } from "../../../hooks/hooks";
 
 export const SolutionDesign2 = () => {

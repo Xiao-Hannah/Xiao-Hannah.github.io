@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import home from "./../../../assets/images/bloome/solution/home.gif";
-import customize from "./../../../assets/images/bloome/solution/customize.gif";
-import tracking from "./../../../assets/images/bloome/solution/tracking.gif";
+import home from "@/assets/images/bloome/solution/home.gif";
+import customize from "@/assets/images/bloome/solution/customize.gif";
+import tracking from "@/assets/images/bloome/solution/tracking.gif";
 interface ItemProps {
   title: string;
   description: string[];

@@ -5,6 +5,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import Footer from "@/components/layout/Footer";
 import { ArrowDown, Mail, ArrowRight } from "lucide-react";
 import resume from "@/assets/files/resume.pdf";
+import profileImage from "@/assets/images/profile/profile.jpg";
 import './Index.less';
 
 const professionalExperience = [
@@ -77,7 +78,7 @@ const Index = () => {
               </p>
             </div>
             <div className="hero-image-column">
-              <img src="/images/profile.jpg" alt="Hannah" className="hero-profile-photo" />
+              <img src={profileImage} alt="Hannah" className="hero-profile-photo" />
             </div>
           </div>
         </div>

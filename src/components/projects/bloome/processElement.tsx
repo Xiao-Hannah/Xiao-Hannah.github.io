@@ -1,5 +1,5 @@
 import React from "react";
-import processelement from "./../../../assets/images/bloome/process/processElement.png";
+import processelement from "@/assets/images/bloome/process/processElement.png";
 
 export const ProcessElement = ({
   text,

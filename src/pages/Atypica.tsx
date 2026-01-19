@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Lock } from "lucide-react";
 import Navigation from "@/components/navigation/Navigation";
 import Footer from "@/components/layout/Footer";
+import atypicaLogo from "@/assets/images/atypica/atypica_logo.jpg";
 import './Atypica.less';
 
 const STORAGE_KEY = 'atypica-auth';
@@ -101,7 +102,7 @@ const Atypica = () => {
                 </a>
               </div>
             </div>
-            <img src="/images/atypica_logo.jpg" alt="Atypica" className="atypica-hero-logo" />
+            <img src={atypicaLogo} alt="Atypica" className="atypica-hero-logo" />
           </div>
         </div>
       </section>
