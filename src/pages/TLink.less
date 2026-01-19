@@ -77,42 +77,38 @@
           line-height: 1.6;
         }
       }
+    }
 
-      .tlink-links {
-        display: flex;
-        gap: 12px;
-        margin-top: 24px;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+    .tlink-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        @media (max-width: 1024px) {
-          flex-wrap: wrap;
-        }
+    .tlink-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: @tmobile-magenta;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: @tmobile-magenta-dark;
+        transform: translateY(-2px);
       }
 
-      .tlink-btn {
-        display: inline-block;
-        padding: 12px 24px;
-        background: @tmobile-magenta;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 500;
-        transition: all 0.3s ease;
+      &.tlink-btn-secondary {
+        background: white;
+        color: @tmobile-magenta;
+        border: 2px solid @tmobile-magenta;
 
         &:hover {
-          background: @tmobile-magenta-dark;
-          transform: translateY(-2px);
-        }
-
-        &.tlink-btn-secondary {
-          background: white;
-          color: @tmobile-magenta;
-          border: 2px solid @tmobile-magenta;
-
-          &:hover {
-            background: @tmobile-light-gray;
-          }
+          background: @tmobile-light-gray;
         }
       }
     }

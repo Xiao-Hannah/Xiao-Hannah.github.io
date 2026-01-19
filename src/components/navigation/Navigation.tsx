@@ -57,7 +57,7 @@ const Navigation = () => {
             Experience
           </button>
           <button onClick={() => scrollToSection('work')} className="nav-link">
-            Work
+            Projects
           </button>
           <button onClick={() => scrollToSection('for-fun')} className="nav-link">
             For Fun

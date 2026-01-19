@@ -65,41 +65,42 @@ const TLink = () => {
                 <p>
                   As Product Manager and Developer, I led CareLink - a smart pill box integrated with dual web portals for patients and doctors. The system uses sensors, gesture-tracking, and T-Mobile 5G to enable real-time medication tracking and verification.
                 </p>
-                <div className="tlink-links">
-                  <a
-                    href="https://tmobile-carelink.netlify.app/home"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="tlink-btn"
-                  >
-                    View Live Demo
-                  </a>
-                  <a
-                    href="https://github.com/Xiao-Hannah/Tmobile-Carelink-Project"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="tlink-btn tlink-btn-secondary"
-                  >
-                    View Hardware Code
-                  </a>
-                  <a
-                    href="https://github.com/urnotvicky-li/CareLink-Portal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="tlink-btn tlink-btn-secondary"
-                  >
-                    View Portal Code
-                  </a>
-                  <a
-                    href={tlinkMilestonePdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="tlink-btn tlink-btn-secondary"
-                  >
-                    View Final Project PDF
-                  </a>
-                </div>
               </div>
+            </div>
+
+            <div className="tlink-links">
+              <a
+                href="https://tmobile-carelink.netlify.app/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tlink-btn"
+              >
+                View Live Demo
+              </a>
+              <a
+                href="https://github.com/Xiao-Hannah/Tmobile-Carelink-Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tlink-btn tlink-btn-secondary"
+              >
+                View Hardware Code
+              </a>
+              <a
+                href="https://github.com/urnotvicky-li/CareLink-Portal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tlink-btn tlink-btn-secondary"
+              >
+                View Portal Code
+              </a>
+              <a
+                href={tlinkMilestonePdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tlink-btn tlink-btn-secondary"
+              >
+                View Final Project PDF
+              </a>
             </div>
           </div>
         </div>

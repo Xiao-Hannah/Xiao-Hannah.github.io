@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/navigation/Navigation";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Footer from "@/components/layout/Footer";
-import { ArrowDown, Mail, ArrowRight } from "lucide-react";
+import { ArrowDown, Mail, ArrowRight, Github, Instagram, Linkedin, FileText } from "lucide-react";
 import resume from "@/assets/files/resume.pdf";
 import profileImage from "@/assets/images/profile/profile.jpg";
 import './Index.less';
@@ -51,10 +51,27 @@ const projects = [
 
 const Index = () => {
   const [heroVisible, setHeroVisible] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
+  const contactRef = useRef<HTMLElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     setHeroVisible(true);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowSidebar(!entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -65,6 +82,51 @@ const Index = () => {
   return (
     <div className="index-page">
       <Navigation />
+
+      {/* Floating Social Sidebar - Left */}
+      <div className={`floating-sidebar floating-sidebar-left ${showSidebar ? 'visible' : ''}`}>
+        <a
+          href="https://github.com/Xiao-Hannah"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <Github />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/hannah-x/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <Linkedin />
+        </a>
+        <a
+          href="https://instagram.com/hanx0628"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <Instagram />
+        </a>
+        <a
+          href={resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Resume"
+        >
+          <FileText />
+        </a>
+        <div className="sidebar-line" />
+      </div>
+
+      {/* Floating Email - Right */}
+      <div className={`floating-sidebar floating-sidebar-right ${showSidebar ? 'visible' : ''}`}>
+        <a href="mailto:hx2313@uw.edu" className="email-link">
+          hx2313@uw.edu
+        </a>
+        <div className="sidebar-line" />
+      </div>
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -222,7 +284,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section">
+      <section id="contact" className="contact-section" ref={contactRef}>
         <div className="container">
           <span className="section-number">05</span>
           <h2>Let's Connect</h2>
@@ -237,12 +299,12 @@ const Index = () => {
 
           <div className="contact-links">
             <a
-              href="https://instagram.com/hanx0628"
+              href="https://www.linkedin.com/in/hannah-x/"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
             >
-              Instagram
+              LinkedIn
             </a>
             <a
               href="https://github.com/Xiao-Hannah"
@@ -251,6 +313,14 @@ const Index = () => {
               className="contact-link"
             >
               GitHub
+            </a>
+            <a
+              href="https://instagram.com/hanx0628"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              Instagram
             </a>
             <a
               href={resume}

@@ -5,6 +5,71 @@
   min-height: 100vh;
 }
 
+// Floating Sidebars
+.floating-sidebar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .sidebar-line {
+    width: 1px;
+    height: 90px;
+    background-color: var(--muted-foreground);
+  }
+
+  a {
+    color: var(--muted-foreground);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.floating-sidebar-left {
+  left: 2.5rem;
+
+  @media (max-width: 1200px) {
+    left: 1.5rem;
+  }
+}
+
+.floating-sidebar-right {
+  right: 2.5rem;
+
+  @media (max-width: 1200px) {
+    right: 1.5rem;
+  }
+
+  .email-link {
+    writing-mode: vertical-rl;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+}
+
 // Hero Section
 .hero-section {
   min-height: 100vh;
